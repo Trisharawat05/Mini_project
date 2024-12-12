@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Earthquakes - ReliefPlus</title>
+    <link rel="stylesheet" href="Estyle.css">
+</head>
+<body>
+    <!-- Header / Navbar -->
+   <header>
+    <div class="navbar">
+        <div class="logo">ReliefPlus</div>
+        <nav>
+            <ul class="nav-links right-links">
+                <li><a href="#">Aid</a></li>
+                <li><a href="#">Support</a></li>
+                <li><a href="#">Contact</a></li>
+                <li><a href="#">Resources</a></li>
+            </ul>
+        </nav>
+        <div class="cta-button">
+            <a href="#">Evacuation Map</a>
+            <a href="#">Contribute</a>
+        </div>
+        <div class="mobile-menu-icon">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </div>
+</header>
+    
+    <!-- Side navigation -->
+<div class="sidenav">
+    <h3>CONTENT</h3>
+    <div class="content">
+        <a href="#overview">Overview</a>
+        <a href="#Terminology">Terminology</a>
+        <div class ="occurence">
+            <a href="#Occurrence" onclick="drop()" >Occurrence</a>
+            <button class ="button" onclick="up()">^</button>
+        </div>
+        <div id="dropdown"></div>
+        <div class="effects">
+    <a href="#Effects" onclick="toggleDropdown()">Effects</a>
+    <button class="button" onclick="clearDropdown()">^</button>
+</div>
+<div id="dropdownIcon"></div>
+        <a href="#prepare">Preparedness and Safety</a>
+        <a href="#historical">Historical Views</a>
+    </div>
+</div>
+    
+<script>
+    const dropdown = document.getElementById('dropdown');
+        
+            function drop(){
+    dropdown.innerHTML = '<ul class="dropdown">' +
+        '<li><a href="#FaultTypes">Fault types</a></li>' +
+        '<li><a href="#EnergyReleased">Energy released</a></li>' +
+        '<li><a href="#Tidalforces">Tidal forces</a></li>' +
+        '<li><a href="#Frequency">Frequency</a></li>' +
+        '<li><a href="#Inducedseismicity">Induced seismicity</a></li>' +
+    '</ul>';
+}
+        function up(){
+            dropdown.innerHTML = '';
+        }
+    
+
+    </script>
+    
+<script>
+    const dropdownIcon = document.getElementById('dropdownIcon');
+    
+    function toggleDropdown() {
+        dropdownIcon.innerHTML = `
+        <ul class="dropdown">
+            <li><a href="#shakingSection">Shaking and ground rupture</a></li>
+            <li><a href="#liquefactionSection">Soil liquefaction</a></li>
+            <li><a href="#humanImpactsSection">Human impacts</a></li>
+            <li><a href="#landslidesSection">Landslides</a></li>
+            <li><a href="#firesSection">Fires</a></li>
+            <li><a href="#tsunamiSection">Tsunami</a></li>
+            <li><a href="#floodsSection">Floods</a></li>
+        </ul>`;
+    }
+    
+    function clearDropdown() {
+        dropdownIcon.innerHTML = '';
+    }
+</script>
+    
+<!-- Page content -->
+<div class="main">
+    
+    <!-- Banner Section -->
+    <section class="banner">
+        <h2>Earthquakes</h2>
+        <p>Comprehensive Guide: Causes, Effects, and Preparedness</p>
+    </section>
+
+    <!-- Overview Section -->
+    <section id="overview">
+        <div class="container">
+            <h3>Overview</h3>
+            <hr><br>
+            <br>
+            <table cellspacing="7">
+            <td><p>
+                An earthquake – also called a quake, tremor, or temblor – is the shaking of the Earth's surface resulting from a sudden release of energy in the lithosphere that creates seismic waves. Earthquakes can range in intensity, from those so weak they cannot be felt, to those violent enough to propel objects and people into the air, damage critical infrastructure, and wreak destruction across entire cities. The seismic activity of an area is the frequency, type, and size of earthquakes experienced over a particular time. The seismicity at a particular location in the Earth is the average rate of seismic energy release per unit volume.<br><br>
+
+In its most general sense, the word earthquake is used to describe any seismic event that generates seismic waves. Earthquakes can occur naturally or be induced by human activities, such as mining, fracking, and nuclear tests. The initial point of rupture is called the hypocenter or focus, while the ground level directly above it is the epicenter. Earthquakes are primarily caused by geological faults, but also by volcanic activity, landslides, and other seismic events. The frequency, type, and size of earthquakes in an area define its seismic activity, reflecting the average rate of seismic energy release.<br><br>
+
+Significant historical earthquakes include the 1556 Shaanxi earthquake in China, with over 830,000 fatalities, and the 1960 Valdivia earthquake in Chile, the largest ever recorded at 9.5 magnitude. Earthquakes result in various effects, such as ground shaking and soil liquefaction, leading to significant damage and loss of life. When the epicenter of a large earthquake is located offshore, the seabed may be displaced sufficiently to cause a tsunami. Earthquakes can trigger landslides. Earthquakes' occurrence is influenced by tectonic movements along faults, including normal, reverse (thrust), and strike-slip faults, with energy release and rupture dynamics governed by the elastic-rebound theory.</p><br><br></td>
+                <td><img src="https://img.freepik.com/premium-photo/landslides-cascading-through-earthquake-zone-as-seismic-waves-ripple-through-ground-dramatic-natural-disaster_685067-23776.jpg" alt="Earthquake Image" width="3000"></td>
+            </table>
+
+<p>Efforts to manage earthquake risks involve prediction, forecasting, and preparedness, including seismic retrofitting and earthquake engineering to design structures that withstand shaking. The cultural impact of earthquakes spans myths, religious beliefs, and modern media, reflecting their profound influence on human societies. Similar seismic phenomena, known as marsquakes and moonquakes, have been observed on other celestial bodies, indicating the universality of such events beyond Earth.<br><br>
+                </p>
+        </div>
+    </section>
+
+    <!-- Terminology of Earthquake -->
+    <section id="Terminology">
+        <div class="container">
+            <h3>Terminology</h3>
+            <hr><br>
+            <br>
+            <p>
+                An earthquake is the shaking of the surface of Earth resulting from a sudden release of energy in the lithosphere that creates seismic waves. Earthquakes may also be referred to as quakes, tremors, or temblors. The word tremor is also used for non-earthquake seismic rumbling.<br><br>
+
+In its most general sense, an earthquake is any seismic event—whether natural or caused by humans—that generates seismic waves. Earthquakes are caused mostly by the rupture of geological faults but also by other events such as volcanic activity, landslides, mine blasts, fracking and nuclear tests. An earthquake's point of initial rupture is called its hypocenter or focus. The epicenter is the point at ground level directly above the hypocenter.<br><br>
+
+The seismic activity of an area is the frequency, type, and size of earthquakes experienced over a particular time. The seismicity at a particular location in the Earth is the average rate of seismic energy release per unit volume.<br><br>
+            </p>
+        </div>
+    </section>
+
+    <!-- Occurrence of Earthquake-->
+    <section id="Occurrence">
+        <div class="container">
+            <h3>Occurrence</h3>
+            <hr><br>
+            <p>
+                Tectonic earthquakes occur anywhere on the earth where there is sufficient stored elastic strain energy to drive fracture propagation along a fault plane. The sides of a fault move past each other smoothly and aseismically only if there are no irregularities or asperities along the fault surface that increases the frictional resistance. Most fault surfaces do have such asperities, which leads to a form of stick-slip behavior. Once the fault has locked, continued relative motion between the plates leads to increasing stress and, therefore, stored strain energy in the volume around the fault surface. This continues until the stress has risen sufficiently to break through the asperity, suddenly allowing sliding over the locked portion of the fault, releasing the stored energy. This energy is released as a combination of radiated elastic strain seismic waves, frictional heating of the fault surface, and cracking of the rock, thus causing an earthquake. This process of gradual build-up of strain and stress punctuated by occasional sudden earthquake failure is referred to as the elastic-rebound theory. It is estimated that only 10 percent or less of an earthquake's total energy is radiated as seismic energy. Most of the earthquake's energy is used to power the earthquake fracture growth or is converted into heat generated by friction. Therefore, earthquakes lower the Earth's available elastic potential energy and raise its temperature, though these changes are negligible compared to the conductive and convective flow of heat out from the Earth's deep interior.
+            </p><br>
+            <table cellspacing="7">
+            <td><h4 id="FaultTypes">Fault types</h4><br>
+            <p>
+            <i>Main article: Fault (geology)</i><br><br>
+            There are three main types of fault, all of which may cause an interplate earthquake: normal, reverse (thrust), and strike-slip. Normal and reverse faulting are examples of dip-slip, where the displacement along the fault is in the direction of dip and where movement on them involves a vertical component. Many earthquakes are caused by movement on faults that have components of both dip-slip and strike-slip; this is known as oblique slip. The topmost, brittle part of the Earth's crust, and the cool slabs of the tectonic plates that are descending into the hot mantle, are the only parts of our planet that can store elastic energy and release it in fault ruptures. Rocks hotter than about 300 °C (572 °F) flow in response to stress; they do not rupture in earthquakes. The maximum observed lengths of ruptures and mapped faults (which may break in a single rupture) are approximately 1,000 km (620 mi). Examples are the earthquakes in Alaska (1957), Chile (1960), and Sumatra (2004), all in subduction zones. The longest earthquake ruptures on strike-slip faults, like the San Andreas Fault (1857, 1906), the North Anatolian Fault in Turkey (1939), and the Denali Fault in Alaska (2002), are about half to one third as long as the lengths along subducting plate margins, and those along normal faults are even shorter.
+            </p><br>
+
+            <h5>Normal faults</h5><br>
+            <p>
+            Normal faults occur mainly in areas where the crust is being extended such as a divergent boundary. Earthquakes associated with normal faults are generally less than magnitude 7. Maximum magnitudes along many normal faults are even more limited because many of them are located along spreading centers, as in Iceland, where the thickness of the brittle layer is only about six kilometres (3.7 mi).</p><br>
+
+           <h5> Reverse faults</h5><br>
+            <p>
+            Reverse faults occur in areas where the crust is being shortened such as at a convergent boundary. Reverse faults, particularly those along convergent boundaries, are associated with the most powerful earthquakes (called megathrust earthquakes) including almost all of those of magnitude 8 or more. Megathrust earthquakes are responsible for about 90% of the total seismic moment released worldwide.</p><br>
+
+            <h5>Strike-slip faults</h5><br>
+            <p>
+                Strike-slip faults are steep structures where the two sides of the fault slip horizontally past each other; transform boundaries are a particular type of strike-slip fault. Strike-slip faults, particularly continental transforms, can produce major earthquakes up to about magnitude 8. Strike-slip faults tend to be oriented near vertically, resulting in an approximate width of 10 km (6.2 mi) within the brittle crust. Thus, earthquakes with magnitudes much larger than 8 are not possible.</p><br><br></td>
+                 <td><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/77/Fault_types.svg/330px-Fault_types.svg.png" alt="Occurrence" width="4000"></td>
+            </table>
+
+
+                <p>Aerial photo of the San Andreas Fault in the Carrizo Plain, northwest of Los Angeles
+                In addition, there exists a hierarchy of stress levels in the three fault types. Thrust faults are generated by the highest, strike-slip by intermediate, and normal faults by the lowest stress levels.This can easily be understood by considering the direction of the greatest principal stress, the direction of the force that "pushes" the rock mass during the faulting. In the case of normal faults, the rock mass is pushed down in a vertical direction, thus the pushing force (greatest principal stress) equals the weight of the rock mass itself. In the case of thrusting, the rock mass "escapes" in the direction of the least principal stress, namely upward, lifting the rock mass, and thus, the overburden equals the least principal stress. Strike-slip faulting is intermediate between the other two types described above. This difference in stress regime in the three faulting environments can contribute to differences in stress drop during faulting, which contributes to differences in the radiated energy, regardless of fault dimensions.</p><br><br>
+               
+            <h4 id="EnergyReleased">Energy released</h4><br>
+            <p>
+            For every unit increase in magnitude, there is a roughly thirty-fold increase in the energy released. For instance, an earthquake of magnitude 6.0 releases approximately 32 times more energy than a 5.0 magnitude earthquake and a 7.0 magnitude earthquake releases 1,000 times more energy than a 5.0 magnitude earthquake. An 8.6-magnitude earthquake releases the same amount of energy as 10,000 atomic bombs of the size used in World War II.
+
+                This is so because the energy released in an earthquake, and thus its magnitude, is proportional to the area of the fault that ruptures and the stress drop. Therefore, the longer the length and the wider the width of the faulted area, the larger the resulting magnitude. The most important parameter controlling the maximum earthquake magnitude on a fault, however, is not the maximum available length, but the available width because the latter varies by a factor of 20. Along converging plate margins, the dip angle of the rupture plane is very shallow, typically about 10 degrees. Thus, the width of the plane within the top brittle crust of the Earth can reach 50–100 km (31–62 mi) (such as in Japan, 2011, or in Alaska, 1964), making the most powerful earthquakes possible.</p><br>
+
+            <h5>Focus</h5><br>
+            <p>
+                <i>Main article: Depth of focus (tectonics)</i><br>
+
+            Collapsed Gran Hotel building in the San Salvador metropolis, after the shallow 1986 San Salvador earthquake
+                The majority of tectonic earthquakes originate in the Ring of Fire at depths not exceeding tens of kilometers. Earthquakes occurring at a depth of less than 70 km (43 mi) are classified as "shallow-focus" earthquakes, while those with a focal depth between 70 and 300 km (43 and 186 mi) are commonly termed "mid-focus" or "intermediate-depth" earthquakes. In subduction zones, where older and colder oceanic crust descends beneath another tectonic plate, deep-focus earthquakes may occur at much greater depths (ranging from 300 to 700 km (190 to 430 mi)). These seismically active areas of subduction are known as Wadati–Benioff zones. Deep-focus earthquakes occur at a depth where the subducted lithosphere should no longer be brittle, due to the high temperature and pressure. A possible mechanism for the generation of deep-focus earthquakes is faulting caused by olivine undergoing a phase transition into a spinel structure.</p><br>
+
+            <h5>Volcanic activity</h5><br>
+            <p>
+                <i>Main article: Volcano tectonic earthquake</i><br>
+                Earthquakes often occur in volcanic regions and are caused there, both by tectonic faults and the movement of magma in volcanoes. Such earthquakes can serve as an early warning of volcanic eruptions, as during the 1980 eruption of Mount St. Helens. Earthquake swarms can serve as markers for the location of the flowing magma throughout the volcanoes. These swarms can be recorded by seismometers and tiltmeters (a device that measures ground slope) and used as sensors to predict imminent or upcoming eruptions.</p><br>
+
+            <h5>Rupture dynamics</h5><br>
+            <p>
+                A tectonic earthquake begins as an area of initial slip on the fault surface that forms the focus. Once the rupture has been initiated, it begins to propagate away from the focus, spreading out along the fault surface. Lateral propagation will continue until either the rupture reaches a barrier, such as the end of a fault segment, or a region on the fault where there is insufficient stress to allow continued rupture. For larger earthquakes, the depth extent of rupture will be constrained downwards by the brittle-ductile transition zone and upwards by the ground surface. The mechanics of this process are poorly understood because it is difficult either to recreate such rapid movements in a laboratory or to record seismic waves close to a nucleation zone due to strong ground motion.</p><br><br>
+
+            <h4 id="Tidalforces">Tidal forces</h4><br>
+            <p>
+                <i>Main article: Tidal triggering of earthquakes</i><br>
+                Tides may trigger some seismicity.</p><br>
+
+            <h5>Clusters</h5><br>
+            <p>
+                Most earthquakes form part of a sequence, related to each other in terms of location and time. Most earthquake clusters consist of small tremors that cause little to no damage, but there is a theory that earthquakes can recur in a regular pattern. Earthquake clustering has been observed, for example, in Parkfield, California where a long-term research study is being conducted around the Parkfield earthquake cluster.</p><br>
+
+            <h5>Aftershocks</h5><br>
+            <p>
+                <i>Main article: Aftershock</i><br>
+            
+                Magnitude of the Central Italy earthquakes of August and October 2016 and January 2017 and the aftershocks (which continued to occur after the period shown here)
+                An aftershock is an earthquake that occurs after a previous earthquake, the mainshock. Rapid changes of stress between rocks, and the stress from the original earthquake are the main causes of these aftershocks, along with the crust around the ruptured fault plane as it adjusts to the effects of the mainshock. An aftershock is in the same region as the main shock but always of a smaller magnitude, however, they can still be powerful enough to cause even more damage to buildings that were already previously damaged from the mainshock. If an aftershock is larger than the mainshock, the aftershock is redesignated as the mainshock and the original main shock is redesignated as a foreshock. Aftershocks are formed as the crust around the displaced fault plane adjusts to the effects of the mainshock.</p><br>
+
+            <h4 id="Frequency">Frequency</h4><br>
+            <p>
+            The Messina earthquake and tsunami took almost 100,000 lives on December 28, 1908, in Sicily and Calabria.
+            It is estimated that around 500,000 earthquakes occur each year, detectable with current instrumentation. About 100,000 of these can be felt. Minor earthquakes occur very frequently around the world in places like California and Alaska in the U.S., as well as in El Salvador, Mexico, Guatemala, Chile, Peru, Indonesia, the Philippines, Iran, Pakistan, the Azores in Portugal, Turkey, New Zealand, Greece, Italy, India, Nepal, and Japan. Larger earthquakes occur less frequently, the relationship being exponential; for example, roughly ten times as many earthquakes larger than magnitude 4 occur than earthquakes larger than magnitude 5. In the (low seismicity) United Kingdom, for example, it has been calculated that the average recurrences are: an earthquake of 3.7–4.6 every year, an earthquake of 4.7–5.5 every 10 years, and an earthquake of 5.6 or larger every 100 years. This is an example of the Gutenberg–Richter law.<br><br>
+
+            The number of seismic stations has increased from about 350 in 1931 to many thousands today. As a result, many more earthquakes are reported than in the past, but this is because of the vast improvement in instrumentation, rather than an increase in the number of earthquakes. The United States Geological Survey (USGS) estimates that, since 1900, there have been an average of 18 major earthquakes (magnitude 7.0–7.9) and one great earthquake (magnitude 8.0 or greater) per year, and that this average has been relatively stable. In recent years, the number of major earthquakes per year has decreased, though this is probably a statistical fluctuation rather than a systematic trend. More detailed statistics on the size and frequency of earthquakes is available from the United States Geological Survey. A recent increase in the number of major earthquakes has been noted, which could be explained by a cyclical pattern of periods of intense tectonic activity, interspersed with longer periods of low intensity. However, accurate recordings of earthquakes only began in the early 1900s, so it is too early to categorically state that this is the case.<br><br>
+
+            Most of the world's earthquakes (90%, and 81% of the largest) take place in the 40,000-kilometre-long (25,000 mi), horseshoe-shaped zone called the circum-Pacific seismic belt, known as the Pacific Ring of Fire, which for the most part bounds the Pacific Plate. Massive earthquakes tend to occur along other plate boundaries too, such as along the Himalayan Mountains.<br><br>
+
+                With the rapid growth of mega-cities such as Mexico City, Tokyo, and Tehran in areas of high seismic risk, some seismologists are warning that a single earthquake may claim the lives of up to three million people.</p><br>
+
+            <h4 id="Inducedseismicity">Induced seismicity</h4><br>
+            <p>
+                <i>Main article: Induced seismicity</i><br>
+                While most earthquakes are caused by the movement of the Earth's tectonic plates, human activity can also produce earthquakes. Activities both above ground and below may change the stresses and strains on the crust, including building reservoirs, extracting resources such as coal or oil, and injecting fluids underground for waste disposal or fracking. Most of these earthquakes have small magnitudes. The 5.7 magnitude 2011 Oklahoma earthquake is thought to have been caused by disposing wastewater from oil production into injection wells, and studies point to the state's oil industry as the cause of other earthquakes in the past century. A Columbia University paper suggested that the 8.0 magnitude 2008 Sichuan earthquake was induced by loading from the Zipingpu Dam, though the link has not been conclusively proved.</p>
+        </div>
+    </section>
+    
+    <!--  Effects -->
+    <section id="Effects">
+        <div class="container">
+            <h3>Effects</h3>
+            <hr><br>
+            <p>
+                The effects of earthquakes include, but are not limited to, the following:
+            </p><br><br>
+            <h4 id="shakingSection">Shaking and ground rupture</h4><br>
+            <p>
+                Shaking and ground rupture are the main effects created by earthquakes, principally resulting in more or less severe damage to buildings and other rigid structures. The severity of the local effects depends on the complex combination of the earthquake magnitude, the distance from the epicenter, and the local geological and geomorphological conditions, which may amplify or reduce wave propagation.The ground-shaking is measured by ground acceleration.<br><br>
+
+Ground rupture is a visible breaking and displacement of the Earth's surface along the trace of the fault, which may be of the order of several meters in the case of major earthquakes. Ground rupture is a major risk for large engineering structures such as dams, bridges, and nuclear power stations and requires careful mapping of existing faults to identify any that are likely to break the ground surface within the life of the structure.</p><br><br>
+            <h4 id="liquefactionSection">Soil liquefaction</h4><br>
+            <p>
+                <i>Main article: Soil liquefaction</i><br>
+Soil liquefaction occurs when, because of the shaking, water-saturated granular material (such as sand) temporarily loses its strength and transforms from a solid to a liquid. Soil liquefaction may cause rigid structures, like buildings and bridges, to tilt or sink into the liquefied deposits. For example, in the 1964 Alaska earthquake, soil liquefaction caused many buildings to sink into the ground, eventually collapsing upon themselves.</p><br><br>
+            <h4 id="humanImpactsSection">Human impacts</h4><br>
+            <p>
+                Physical damage from an earthquake will vary depending on the intensity of shaking in a given area and the type of population. Underserved and developing communities frequently experience more severe impacts (and longer lasting) from a seismic event compared to well-developed communities. Impacts may include:</p>
+<ul>
+    <li>Injuries and loss of life</li>
+    <li>Damage to critical infrastructure (short and long-term)</li>
+    <li>Roads, bridges, and public transportation networks</li>
+    <li>Water, power, sewer and gas interruption</li>
+    <li>Communication systems</li>
+    <li>Loss of critical community services including hospitals, police, and fire</li>
+    <li>General property damage</li>
+    <li>Collapse or destabilization (potentially leading to future collapse) of buildings</li>
+    </ul>
+            <p>With these impacts and others, the aftermath may bring disease, a lack of basic necessities, mental consequences such as panic attacks and depression to survivors, and higher insurance premiums. Recovery times will vary based on the level of damage and the socioeconomic status of the impacted community.</p><br><br>
+            <h4 id="landslidesSection">Landslides</h4><br>
+            <p>
+                <i>Further information: Landslide</i><br>
+Earthquakes can produce slope instability leading to landslides, a major geological hazard. Landslide danger may persist while emergency personnel is attempting rescue work.</p><br><br>
+            <h4 id="firesSection">Fires</h4><br>
+            <p>
+                Earthquakes can cause fires by damaging electrical power or gas lines. In the event of water mains rupturing and a loss of pressure, it may also become difficult to stop the spread of a fire once it has started. For example, more deaths in the 1906 San Francisco earthquake were caused by fire than by the earthquake itself.</p><br><br>
+            <h4 id="tsunamiSection">Tsunami</h4><br>
+            <p>
+                <i>Main article: Tsunami</i><br>
+Tsunamis are long-wavelength, long-period sea waves produced by the sudden or abrupt movement of large volumes of water—including when an earthquake occurs at sea. In the open ocean, the distance between wave crests can surpass 100 kilometres (62 mi), and the wave periods can vary from five minutes to one hour. Such tsunamis travel 600–800 kilometers per hour (373–497 miles per hour), depending on water depth. Large waves produced by an earthquake or a submarine landslide can overrun nearby coastal areas in a matter of minutes. Tsunamis can also travel thousands of kilometers across open ocean and wreak destruction on far shores hours after the earthquake that generated them.<br><br>
+            Ordinarily, subduction earthquakes under magnitude 7.5 do not cause tsunamis, although some instances of this have been recorded. Most destructive tsunamis are caused by earthquakes of magnitude 7.5 or more.</p><br><br>
+            <h4 id="floodsSection">Floods</h4><br>
+            <p>
+                <i>Further information: Flood</i><br>
+Floods may be secondary effects of earthquakes if dams are damaged. Earthquakes may cause landslips to dam rivers, which collapse and cause floods.<br>
+
+The terrain below the Sarez Lake in Tajikistan is in danger of catastrophic flooding if the landslide dam formed by the earthquake, known as the Usoi Dam, were to fail during a future earthquake. Impact projections suggest the flood could affect roughly five million people.</p><br><br>
+        </div>
+    </section>
+
+    <!-- Preparedness Section -->
+    <section id="prepare">
+        <div class="container">
+            <h3>Preparedness and Safety</h3>
+            <hr><br>
+            <p>The primary dangers to workers result from: being struck by structural components or furnishings, inadequately secured stored materials, burns resulting from building fires resulting from gas leaks or electrical shorts, or exposure to chemicals released from stored or process chemicals. Many of the hazards to workers both during and following an earthquake are predictable and may be reduced through hazard identification, planning, and mitigation.<br><br>
+
+There are many things you can do to prepare your workplace before an earthquake occurs:<br><br>
+
+1. Pick "safe places". A safe place could be under a sturdy table or desk or against an interior wall away from windows, bookcases or tall furniture that could fall on you. The shorter the distance to move to safety, the less likely that you will be injured. Injury statistics show that people moving as little as ten feet during an earthquake's shaking are most likely to be injured.<br><br>
+2. Practice drop, cover, and hold-on in each safe place. Drop under a sturdy desk or table and hold on to one leg of the table or desk. Protect your eyes by keeping your head down. Practice these actions so that they become an automatic response.<br><br>
+3.Practice these safe earthquake procedures (i.e., drop, cover, and hold-on) at least twice a year. Frequent practice will help reinforce safe behavior. When an earthquake or other disaster occurs, many people hesitate, trying to remember what they are supposed to do. Responding quickly and automatically may help protect you from injury.<br><br>
+4.Make a plan for workers to follow in the event of an earthquake and be sure that it includes the following precautions:<br>
+<ul><br><br>
+    <li>Wait in your safe place until the shaking stops, then check to see if you are hurt. You will be better able to help others if you take care of yourself first, and then check the people around you. Move carefully and watch out for things that have fallen or broken, creating hazards. Be ready for aftershocks.</li>
+    <li>Be on the lookout for fires. Fire is the most common earthquake-related hazard, due to broken gas lines, damaged electrical lines or appliances, and previously contained fires or sparks being released.</li>
+    <li>If you must leave a building after the shaking stops, use the stairs, not the elevator, and look for falling debris. Earthquakes can cause fire alarms and fire sprinklers to go off. You will not be able to rule out whether there is a real threat of fire, and the elevators may have been compromised. Always use the stairs.</li>
+    <li>If you're outside in an earthquake, stay outside. Move away from buildings, trees, streetlights and overhead lines. Crouch down and cover your head. Many injuries occur within ten feet of the entrance to buildings. Bricks, roofing and other materials can fall from buildings, injuring persons nearby. Trees, streetlights and overhead lines may also fall, causing damage or injury.</li>
+</ul><br><br>
+    <centre><img src="https://www.ready.gov/sites/default/files/styles/large/public/2021-03/illustration_earthquake_drop-cover-hold-on_0.png?itok=a_x6XtRz" alt="Preparedness for Earthquake" width="1000"></centre><br><br>
+<p>5.Inform workers of the plan and discuss earthquakes with workers. Everyone in your workplace should know what to do if an earthquake occurs. Discussing earthquakes ahead of time helps reduce fear and anxiety and lets everyone know how to respond.<br><br>
+6.Get training. Take a first-aid class from an organization such as the American Red Cross, American Heart Association, or National Safety Council chapter. Get training on how to use a fire extinguisher. Keep your training current. Training will help you to keep focused and know what to do when an earthquake occurs.<br><br>
+7.Businesses can use the Federal Emergency Management Agency How to Series for protecting people/property during emergencies. Perform a workplace survey, especially if you are in an area with a high risk of earthquakes, to identify potential hazards to workers if an earthquake occurs. Look for furniture or materials that could fall and strike workers or block means of egress, or cause a release of hazardous materials, or otherwise affect the health and safety of workers as a result of utility loss or system/structural failure. Follow mitigation techniques recommended by FEMA for equipment and furniture.<br><br>
+8. Employers whose workers will be involved in emergency response operations for releases of, or substantial threats of releases of, hazardous substances regardless of the location of the hazard must comply with OSHA’s Hazardous Waste Operations and Emergency Response (HAZWOPER) standard, 29 CFR 1910.120. This may include emergency response following an earthquake. Instruction CPL 02-02-073 describes OSHA enforcement procedures under the relevant provisions of the HAZWOPER standard.<br><br>
+
+The U.S. Environmental Protection Agency (EPA) has promulgated a standard applying OSHA’s HAZWOPER standard to state and local government workers in states where there is no OSHA-approved State Plan. See 40 CFR Part 311.
+
+OSHA’s HAZWOPER Safety and Health Topics page explains requirements of the OSHA HAZWOPER standard, including required worker training.</p>
+            
+        </div>
+    </section>
+
+    <!-- Historical Earthquakes -->
+    <section id="historical">
+        <div class="container">
+            <h3>Historical Views</h3>
+            <hr><br>
+            <p>
+                From the lifetime of the Greek philosopher Anaxagoras in the 5th century BCE to the 14th century CE, earthquakes were usually attributed to "air (vapors) in the cavities of the Earth."[83] Thales of Miletus (625–547 BCE) was the only documented person who believed that earthquakes were caused by tension between the earth and water. Other theories existed, including the Greek philosopher Anaxamines' (585–526 BCE) beliefs that short incline episodes of dryness and wetness caused seismic activity. The Greek philosopher Democritus (460–371 BCE) blamed water in general for earthquakes. Pliny the Elder called earthquakes "underground thunderstorms".<br><br>
+                <table cellspacing="7">
+            <td><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/76/Lycosth%C3%A8ne.jpg/330px-Lycosth%C3%A8ne.jpg" alt="Historic image" width="1000"></td>
+            <td><h4>Mythology and religion</h4><br><br>
+            
+<p>In Norse mythology, earthquakes were explained as the violent struggle of the god Loki. When Loki, god of mischief and strife, murdered Baldr, god of beauty and light, he was punished by being bound in a cave with a poisonous serpent placed above his head dripping venom. Loki's wife Sigyn stood by him with a bowl to catch the poison, but whenever she had to empty the bowl the poison dripped on Loki's face, forcing him to jerk his head away and thrash against his bonds, which caused the earth to tremble.<br><br>
+
+In Greek mythology, Poseidon was the cause and god of earthquakes. When he was in a bad mood, he struck the ground with a trident, causing earthquakes and other calamities. He also used earthquakes to punish and inflict fear upon people as revenge.<br><br>
+
+In Japanese mythology, Namazu (鯰) is a giant catfish who causes earthquakes. Namazu lives in the mud beneath the earth and is guarded by the god Kashima who restrains the fish with a stone. When Kashima lets his guard fall, Namazu thrashes about, causing violent earthquakes.<br><br></td>
+            </table>
+
+<p>In the New Testament, Matthew's Gospel refers to earthquakes occurring both after the death of Jesus (Matthew 27:51, 54) and at his resurrection (Matthew 28:2). Earthquakes form part of the picture through which Jesus portrays the beginning of the end of time.<br><br>
+                </p>
+        </div>
+    </section>
+     </div>
+
+    <!-- Footer Section -->
+    <footer>
+        <div class="footer-container">
+            <p>ReliefPlus &copy; 2024 | All Rights Reserved</p>
+            <nav>
+                <a href="#">Aid</a>
+                <a href="#">Support</a>
+                <a href="#">Contact</a>
+                <a href="#">Resources</a>
+            </nav>
+        </div>
+    </footer>
+
+    <script src="Escrip.js"></script>
+</body>
+</html>
