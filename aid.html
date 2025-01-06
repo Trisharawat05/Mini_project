@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ReliefPlus - Aid</title>
+    <style>
+        * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Helvetica Neue', sans-serif;
+    color: #fafafa;
+    background: linear-gradient(135deg, #141e30, #243b55);
+}
+
+/* Header and Navigation */
+header {
+    background: rgba(0, 0, 0, 0.85);
+    padding: 15px 30px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    width: 100%;
+}
+
+.logo {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #ff6b81;
+    text-transform: uppercase;
+    text-align: left;
+    flex: 1; 
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #fafafa;
+    font-size: 1rem;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+nav ul li a:hover {
+    background-color: #ff6b81;
+    transition: 0.3s ease;
+}
+
+.right-links {
+    flex: 1; 
+    justify-content: flex-end;
+}
+
+.cta-button a {
+    padding: 10px 25px;
+    margin-left: 30px;
+    background-color: #ff6b81;
+    color: white;
+    text-decoration: none;
+    border-radius: 50px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.cta-button a:hover {
+    background-color: #ff3b59;
+}
+
+.mobile-menu-icon {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+}
+
+.mobile-menu-icon span {
+    width: 25px;
+    height: 3px;
+    background-color: #fff;
+}
+
+        .content {
+            padding: 40px 20px;
+        }
+
+        .content h2 {
+            font-size: 36px;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .content p {
+            font-size: 18px;
+            line-height: 1.6;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+
+        .aid-section {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .aid-card {
+            background-color: #2b3f5c;
+            border-radius: 10px;
+            padding: 20px;
+            max-width: 300px;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .aid-card h3 {
+            font-size: 24px;
+            margin-bottom: 15px;
+            color: #ff5c8a;
+        }
+
+        .aid-card p {
+            font-size: 16px;
+            margin-bottom: 15px;
+        }
+
+        .aid-card a {
+            display: inline-block;
+            padding: 10px 20px;
+            color: white;
+            background-color: #ff5c8a;
+            border-radius: 20px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .aid-card a:hover {
+            background-color: #e0547d;
+        }
+    </style>
+</head>
+<body>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ReliefPlus - Prepare, Aid, Support</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+    <div class="navbar">
+        <div class="logo">ReliefPlus</div>
+        <nav>
+            <ul class="nav-links right-links">
+                <li><a href="aid.html">Aid</a></li>
+                <li><a href="#">Support</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="#">Resources</a></li>
+            </ul>
+        </nav>
+        
+        <div class="cta-button">
+            <a href="map1.html">Evacuation Map</a>
+            <a href="#">Contribute</a>
+        </div>
+        <div class="mobile-menu-icon">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </div>
+</header>
+
+
+    <div class="content">
+        <h2>Our Aid Programs</h2>
+        <p>ReliefPlus is dedicated to providing essential aid during times of crisis. Explore our programs below to learn more about how we assist communities in need.</p>
+
+        <div class="aid-section">
+            <div class="aid-card">
+                <h3>Emergency Food Supply</h3>
+                <p>We provide nutritious meals to those affected by disasters and crises, ensuring no one goes hungry.</p>
+            </div>
+
+            <div class="aid-card">
+                <h3>Medical Assistance</h3>
+                <p>Our medical aid programs offer critical healthcare services, medications, and support to those in need.</p>
+            </div>
+
+            <div class="aid-card">
+                <h3>Temporary Shelter</h3>
+                <p>We set up temporary shelters for displaced individuals, providing a safe space for recovery and comfort.</p>
+            </div>
+
+            <div class="aid-card">
+                <h3>Clean Water Access</h3>
+                <p>Ensuring access to clean and safe drinking water is a priority in our relief efforts.</p>
+            </div>
+
+            <div class="aid-card">
+                <h3>Mental Health Support</h3>
+                <p>Our counselors and support staff help individuals cope with the psychological impact of crises.</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
