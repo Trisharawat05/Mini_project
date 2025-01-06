@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ReliefPlus - Recovery</title>
+    <style>
+        * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Helvetica Neue', sans-serif;
+    color: #fafafa;
+    background: linear-gradient(135deg, #141e30, #243b55);
+}
+
+/* Header and Navigation */
+header {
+    background: rgba(0, 0, 0, 0.85);
+    padding: 15px 30px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    width: 100%;
+}
+
+.logo {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #ff6b81;
+    text-transform: uppercase;
+    text-align: left;
+    flex: 1; 
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #fafafa;
+    font-size: 1rem;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+nav ul li a:hover {
+    background-color: #ff6b81;
+    transition: 0.3s ease;
+}
+
+.right-links {
+    flex: 1; 
+    justify-content: flex-end;
+}
+
+.cta-button a {
+    padding: 10px 25px;
+    margin-left: 30px;
+    background-color: #ff6b81;
+    color: white;
+    text-decoration: none;
+    border-radius: 50px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.cta-button a:hover {
+    background-color: #ff3b59;
+}
+
+.mobile-menu-icon {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+}
+
+.mobile-menu-icon span {
+    width: 25px;
+    height: 3px;
+    background-color: #fff;
+}
+
+        .content {
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        .content h2 {
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+
+        .content p {
+            font-size: 18px;
+            line-height: 1.6;
+            margin-bottom: 30px;
+        }
+
+        .recovery-section {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .recovery-card {
+            background-color: #2b3f5c;
+            border-radius: 10px;
+            padding: 20px;
+            max-width: 300px;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .recovery-card h3 {
+            font-size: 24px;
+            margin-bottom: 15px;
+            color: #ff5c8a;
+        }
+
+        .recovery-card p {
+            font-size: 16px;
+            margin-bottom: 15px;
+        }
+
+        .recovery-card a {
+            display: inline-block;
+            padding: 10px 20px;
+            color: white;
+            background-color: #ff5c8a;
+            border-radius: 20px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .recovery-card a:hover {
+            background-color: #e0547d;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="navbar">
+            <div class="logo">ReliefPlus</div>
+            <nav>
+                <ul class="nav-links right-links">
+                    <li><a href="aid.html">Aid</a></li>
+                    <li><a href="#">Support</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="recovery.html">Resources</a></li>
+                </ul>
+            </nav>
+            
+            <div class="cta-button">
+                <a href="map1.html">Evacuation Map</a>
+                <a href="#">Contribute</a>
+            </div>
+            <div class="mobile-menu-icon">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </header>
+
+    <div class="content">
+        <h2>Government Relief Schemes</h2>
+        <p>Explore various government relief schemes aimed at supporting recovery and rebuilding efforts. Click on the links below to learn more and access the official resources.</p>
+
+        <div class="recovery-section">
+            <div class="recovery-card">
+                <h3>National Disaster Relief Fund</h3>
+                <p>Provides financial assistance to individuals and communities affected by natural disasters.</p>
+                <a href="https://ndrf.gov.in" target="_blank">Learn More</a>
+            </div>
+
+            <div class="recovery-card">
+                <h3>Pradhan Mantri Awas Yojana</h3>
+                <p>A housing scheme for those affected by disasters, providing financial aid for reconstruction.</p>
+                <a href="https://pmaymis.gov.in/" target="_blank">Learn More</a>
+            </div>
+
+            <div class="recovery-card">
+                <h3>PM Kisan Samman Nidhi</h3>
+                <p>Financial assistance to farmers to recover from agricultural losses due to natural calamities.</p>
+                <a href="https://pmkisan.gov.in" target="_blank">Learn More</a>
+            </div>
+
+            <div class="recovery-card">
+                <h3>Health Insurance Schemes</h3>
+                <p>Access affordable healthcare through government-backed health insurance programs.</p>
+                <a href="https://www.pmjay.gov.in" target="_blank">Learn More</a>
+            </div>
+
+            <div class="recovery-card">
+                <h3>Mahatma Gandhi National Rural Employment Guarantee Act (MGNREGA)</h3>
+                <p>Employment opportunities to support recovery and rebuild livelihoods in rural areas.</p>
+                <a href="https://nrega.nic.in" target="_blank">Learn More</a>
+            </div>
+
+            <div class="recovery-card">
+                <h3>Rural Infrastructure Development Fund</h3>
+                <p>Funding for rebuilding essential infrastructure in disaster-affected rural regions.</p>
+                <a href="https://www.nabard.org/content1.aspx?id=573&catid=8&mid=8" target="_blank">Learn More</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
