@@ -1,0 +1,18 @@
+/* Set the size of the map container */
+#map {
+    height: 75vh;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    border: 1px solid #ddd;
+}
+
+/* Style the directions panel */
+#directions-panel {
+    background-color: #fff;
+    padding: 10px;
+    margin-top: 10px;
+    max-height: 25vh;
+    overflow-y: auto;
+    border: 1px solid #ddd;
+}

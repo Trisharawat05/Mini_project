@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ReliefPlus - Support</title>
+    <style>
+        * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Helvetica Neue', sans-serif;
+    color: #fafafa;
+    background: linear-gradient(135deg, #141e30, #243b55);
+}
+
+/* Header and Navigation */
+header {
+    background: rgba(0, 0, 0, 0.85);
+    padding: 15px 30px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    width: 100%;
+}
+
+.logo {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #ff6b81;
+    text-transform: uppercase;
+    text-align: left;
+    flex: 1; 
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #fafafa;
+    font-size: 1rem;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+nav ul li a:hover {
+    background-color: #ff6b81;
+    transition: 0.3s ease;
+}
+
+.right-links {
+    flex: 1; 
+    justify-content: flex-end;
+}
+
+.cta-button a {
+    padding: 10px 25px;
+    margin-left: 30px;
+    background-color: #ff6b81;
+    color: white;
+    text-decoration: none;
+    border-radius: 50px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.cta-button a:hover {
+    background-color: #ff3b59;
+}
+
+.mobile-menu-icon {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+}
+
+.mobile-menu-icon span {
+    width: 25px;
+    height: 3px;
+    background-color: #fff;
+}
+
+        .content {
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        .content h2 {
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+
+        .content p {
+            font-size: 18px;
+            line-height: 1.6;
+            margin-bottom: 30px;
+        }
+
+        .ngo-section {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .ngo-card {
+            background-color: #2b3f5c;
+            border-radius: 10px;
+            padding: 20px;
+            max-width: 300px;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .ngo-card h3 {
+            font-size: 24px;
+            margin-bottom: 15px;
+            color: #ff5c8a;
+        }
+
+        .ngo-card p {
+            font-size: 16px;
+            margin-bottom: 15px;
+        }
+
+        .ngo-card a {
+            display: inline-block;
+            padding: 10px 20px;
+            color: white;
+            background-color: #ff5c8a;
+            border-radius: 20px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .ngo-card a:hover {
+            background-color: #e0547d;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="navbar">
+            <div class="logo">ReliefPlus</div>
+            <nav>
+                <ul class="nav-links right-links">
+                    <li><a href="aid.html">Aid</a></li>
+                    <li><a href="support.html">Support</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="recovery.html">Resources</a></li>
+                </ul>
+            </nav>
+            
+            <div class="cta-button">
+                <a href="map1.html">Evacuation Map</a>
+                <a href="donate.html">Contribute</a>
+            </div>
+            <div class="mobile-menu-icon">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </header>
+
+    <div class="content">
+        <h2>Find Support Through Trusted NGOs</h2>
+        <p>Partnering with organizations that make a difference. Below are some NGOs you can reach out to for support:</p>
+
+        <div class="ngo-section">
+            <div class="ngo-card">
+                <h3>Red Cross</h3>
+                <p>Providing emergency assistance, disaster relief, and education worldwide.</p>
+                <a href="https://www.redcross.org" target="_blank">Visit Website</a>
+            </div>
+
+            <div class="ngo-card">
+                <h3>Oxfam</h3>
+                <p>Focusing on alleviating global poverty through advocacy and action.</p>
+                <a href="https://www.oxfam.org" target="_blank">Visit Website</a>
+            </div>
+
+            <div class="ngo-card">
+                <h3>UNICEF</h3>
+                <p>Working for children's rights, education, and emergency aid worldwide.</p>
+                <a href="https://www.unicef.org" target="_blank">Visit Website</a>
+            </div>
+
+            <div class="ngo-card">
+                <h3>Doctors Without Borders</h3>
+                <p>Delivering medical care to those affected by conflicts and disasters.</p>
+                <a href="https://www.doctorswithoutborders.org" target="_blank">Visit Website</a>
+            </div>
+
+            <div class="ngo-card">
+                <h3>CARE</h3>
+                <p>Fighting poverty and providing disaster relief globally.</p>
+                <a href="https://www.care.org" target="_blank">Visit Website</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Hurricane - ReliefPlus</title>
+    <link rel="stylesheet" href="hurricane-style.css">
+</head>
+<body>
+    <!-- Header / Navbar -->
+    <header>
+        <div class="navbar">
+            <div class="logo">ReliefPlus</div>
+            <nav>
+                <ul class="nav-links right-links">
+                    <li><a href="aid.html">Aid</a></li>
+                    <li><a href="support.html">Support</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="recovery.html">Resources</a></li>
+                </ul>
+            </nav>
+            
+            <div class="cta-button">
+                <a href="map1.html">Evacuation Map</a>
+                <a href="donate.html">Contribute</a>
+            </div>
+            <div class="mobile-menu-icon">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </header>
+
+    <!-- Side navigation -->
+    <div class="sidenav">
+        <h3>CONTENT</h3>
+        <div class="content">
+            <a href="#overview">Overview</a>
+            <div class="dropdown-section">
+                <a href="#Precautions" onclick="toggleDropdown('precautionDropdown')">Precautions</a>
+                <div id="precautionDropdown" class="dropdown-content"></div>
+            </div>
+            <a href="#prepare">Preparedness</a>
+        </div>
+    </div>
+    
+    <script>
+        function toggleDropdown(dropdownId) {
+            const dropdown = document.getElementById(dropdownId);
+            if (dropdown.innerHTML === '') {
+                if (dropdownId === 'precautionDropdown') {
+                    dropdown.innerHTML = `
+                        <ul>
+                            <li><a href="#beforeHurricane">Before Hurricane</a></li>
+                            <li><a href="#afterHurricane">After Hurricane</a></li>
+                        </ul>`;
+                }
+            } else {
+                dropdown.innerHTML = '';
+            }
+        }
+    </script>    
+
+    <!-- Page content -->
+    <div class="main">
+        <!-- Banner Section -->
+        <section class="banner">
+            <h2>Hurricanes</h2>
+            <p>Comprehensive Guide: Causes, Effects, and Preparedness</p>
+        </section>
+
+        <!-- Overview Section -->
+        <section id="overview">
+            <div class="container">
+                <h3>Overview</h3>
+                <hr><br>
+                <table cellspacing="7">
+                    <tr>
+                        <td style="vertical-align: top;">
+                            <p>
+                                Hurricanes are large, swirling storms characterized by strong winds and heavy rains. Forming over warm ocean waters, they can cause massive damage to coastal areas through storm surges, flooding, and extreme wind speeds. Preparedness is key to minimizing their devastating impact.
+                            </p>
+                        </td>
+                        <td>
+                            <img src="https://www.belfor.com/us/wp-content/uploads/sites/2/2024/08/Tropical-Storm-vs-Hurricane-What_s-the-Difference.jpeg" alt="Hurricane Image" style="width:400px; height:auto;">
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </section>
+
+        <!-- Precautions for Hurricanes -->
+        <section id="Precautions">
+            <div class="container">
+                <h3>Precautions - Before and After a Hurricane</h3>
+                <hr><br>
+
+                <!-- Pre-disaster precautions -->
+                <div class="do's" id="beforeHurricane">
+                    <h4>Do's Before a Hurricane</h4>
+                    <div class="precaution" id="secureHome">
+                        <h5>Secure Your Home:</h5>
+                        <p>Install storm shutters and reinforce your roof and garage doors to minimize damage.</p>
+                        <img src="https://insuristic.co.uk/wp-content/uploads/2023/01/Keeping-a-property-secure.webp" alt="Secure Home" style="width:300px; height:auto; margin-left: 400px;">
+                    </div>
+                    <div class="precaution" id="evacuationPlan">
+                        <h5>Evacuation Plan:</h5>
+                        <p>Identify evacuation routes and shelters in your area, and keep your vehicle fueled.</p>
+                        <img src="https://images.wondershare.com/edrawmax/maker2023/evacuation-plan-maker/new/brand-banner.png" alt="Evacuation Plan" style="width:300px; height:auto; margin-left: 400px;">
+                    </div>
+                    <div class="precaution" id="emergencySupplies">
+                        <h5>Emergency Supplies:</h5>
+                        <p>Assemble a hurricane kit with water, food, batteries, flashlights, and first-aid items.</p>
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQwXeeEdtMsqaTx8yGWKONNYqVDq5bSo2LCcw&s" alt="Emergency Supplies" style="width:300px; height:auto; margin-left: 400px;">
+                    </div>
+                </div>
+
+                <!-- Post-disaster precautions -->
+                <div class="do's" id="afterHurricane">
+                    <h4>Do's After a Hurricane</h4>
+                    <div class="precaution" id="stayInformed">
+                        <h5>Stay Informed:</h5>
+                        <p>Continue monitoring updates from local authorities about safety and recovery efforts.</p>
+                        <img src="https://thumbs.dreamstime.com/b/stay-informed-keep-yourself-updated-knowledgeable-current-events-developments-changes-particular-field-326016494.jpg" alt="Stay Informed" style="width:300px; height:auto;margin-left: 70px;">
+                    </div>
+                    <div class="precaution" id="avoidFloodwaters">
+                        <h5>Avoid Floodwaters:</h5>
+                        <p>Stay away from standing water as it may be contaminated or hide hazards.</p>
+                        <img src="https://www.wikihow.com/images/thumb/2/23/Survive-a-Flood-Step-6-Version-4.jpg/v4-460px-Survive-a-Flood-Step-6-Version-4.jpg.webp" alt="Avoid Floodwaters" style="width:300px; height:auto;margin-left: 70px;">
+                    </div>
+                    <div class="precaution" id="inspectDamages">
+                        <h5>Inspect for Damages:</h5>
+                        <p>Carefully check your home for structural damages and report any hazards to authorities.</p>
+                        <img src="https://www.shutterstock.com/image-vector/illustration-check-damage-situation-house-260nw-1961721994.jpg" alt="Inspect Damages" style="width:300px; height:auto;margin-left: 70px;">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Preparedness Section -->
+        <section id="prepare">
+            <div class="container">
+                <h3>Preparedness</h3>
+                <hr><br>
+                <ul>
+                    <li>
+                        Understand hurricane categories and warnings.
+                        <br><img src="https://ichef.bbci.co.uk/news/480/cpsprodpb/B66C/production/_133600764_hurricane_scale_wbg_2x640.png.webp" alt="Hurricane Warning" style="width:300px; height:auto; margin-left: 70px;">
+                    </li>
+                    <li>
+                        Regularly inspect your property for vulnerabilities to strong winds and rain.
+                        <br><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT1h2ldFjqT5QQo4JlsayPVeVT3LskhK6soqQ&s" alt="Property Inspection" style="width:300px; height:auto; margin-left: 70px;">
+                    </li>
+                    <li>
+                        Create a communication plan with family members.
+                        <br><img src="https://media.istockphoto.com/id/1407318612/vector/illustration-of-a-family-checking-evacuation-routes-on-a-hazard-map.jpg?s=612x612&w=0&k=20&c=zmDbgtHSYohlODtTCzD6L9ov_8C4fcufxcugFPJhbLM=" alt="Communication Plan" style="width:300px; height:auto; margin-left: 70px;">
+                    </li>
+                    <li>
+                        Ensure you have flood insurance coverage.
+                        <br><img src="https://www.seaportre.com/uploads/agent-2/flood-insurance_v4-0129507a12b24aaea4fafee0eb9ed1f6.png" alt="Flood Insurance" style="width:300px; height:auto;margin-left: 70px; margin-bottom: 100px;">
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+    <!-- Footer Section -->
+    <footer>
+        <div class="footer-container">
+            <p>ReliefPlus &copy; 2024 | All Rights Reserved</p>
+            <nav>
+                <a href="aid.html">Aid</a>
+                <a href="support.html">Support</a>
+                <a href="contact.html">Contact</a>
+                <a href="recovery.html">Resources</a>
+            </nav>
+        </div>
+    </footer>
+</body>
+</html>

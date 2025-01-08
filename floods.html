@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Flood - ReliefPlus</title>
+    <link rel="stylesheet" href="floods-style.css">
+</head>
+<body>
+    <!-- Header / Navbar -->
+    <header>
+        <div class="navbar">
+            <div class="logo">ReliefPlus</div>
+            <nav>
+                <ul class="nav-links right-links">
+                    <li><a href="aid.html">Aid</a></li>
+                    <li><a href="support.html">Support</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="recovery.html">Resources</a></li>
+                </ul>
+            </nav>
+            
+            <div class="cta-button">
+                <a href="map1.html">Evacuation Map</a>
+                <a href="donate.html">Contribute</a>
+            </div>
+            <div class="mobile-menu-icon">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </header>
+
+    <!-- Side navigation -->
+    <div class="sidenav">
+        <h3>CONTENT</h3>
+        <div class="content">
+            <a href="#overview">Overview</a>
+            <div class="dropdown-section">
+                <a href="#Precautions" onclick="toggleDropdown('precautionDropdown')">Precautions</a>
+                <div id="precautionDropdown" class="dropdown-content"></div>
+            </div>
+            <a href="#prepare">Preparedness</a>
+        </div>
+    </div>
+    
+    <script>
+        function toggleDropdown(dropdownId) {
+            const dropdown = document.getElementById(dropdownId);
+            if (dropdown.innerHTML === '') {
+                if (dropdownId === 'precautionDropdown') {
+                    dropdown.innerHTML = `
+                        <ul>
+                            <li><a href="#beforeFlood">Before Flood</a></li>
+                            <li><a href="#afterFlood">After Flood</a></li>
+                        </ul>`;
+                }
+            } else {
+                dropdown.innerHTML = '';
+            }
+        }
+    </script>    
+
+    <!-- Page content -->
+    <div class="main">
+        <!-- Banner Section -->
+        <section class="banner">
+            <h2>Floods</h2>
+            <p>Comprehensive Guide: Causes, Effects, and Preparedness</p>
+        </section>
+
+        <!-- Overview Section -->
+        <section id="overview">
+            <div class="container">
+                <h3>Overview</h3>
+                <hr><br>
+                <table cellspacing="7">
+                    <tr>
+                        <td style="vertical-align: top;">
+                            <p>
+                                Flooding occurs when water overflows onto normally dry land, often due to heavy rainfall, overflowing rivers, or storm surges. Floods can cause widespread destruction to property, disrupt transportation, and lead to loss of life. It is essential to prepare for floods to minimize their impact.
+                            </p>
+                        </td>
+                        <td>
+                            <img src="https://www.shutterstock.com/shutterstock/videos/3614323343/thumb/1.jpg?ip=x480" alt="Flood Image" style="width:400px; height:auto;">
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </section>
+
+        <!-- Precautions for Floods -->
+        <section id="Precautions">
+            <div class="container">
+                <h3>Precautions - Before and After a Flood</h3>
+                <hr><br>
+
+                <!-- Pre-disaster precautions -->
+                <div class="do's" id="beforeFlood">
+                    <h4>Do's Before a Flood</h4>
+                    <div class="precaution" id="prepareSandbags">
+                        <h5>Prepare Sandbags:</h5>
+                        <p>Use sandbags to block water from entering your home.</p>
+                        <img src="data:image/jpeg;base64,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" alt="Sandbags for Floods" style="width:300px; height:auto; margin-left: 400px;">
+                    </div>
+                    <div class="precaution" id="moveValuables">
+                        <h5>Move Valuables to Higher Levels:</h5>
+                        <p>Store important items and documents on higher floors or safe locations.</p>
+                        <img src="https://www.mdpi.com/buildings/buildings-11-00475/article_deploy/html/images/buildings-11-00475-g004-550.jpg" alt="Move Valuables" style="width:300px; height:auto; margin-left: 400px;">
+                    </div>
+                    <div class="precaution" id="stayUpdatedFlood">
+                        <h5>Stay Updated:</h5>
+                        <p>Keep track of weather reports and flood warnings from local authorities.</p>
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRWieFQzFm2SLTbFafOqAOdApEsQdi-u4XiH4rDyphNuuhChYAzy5SkM9DY1oewBR37WDc&usqp=CAU" alt="Stay Updated" style="width:300px; height:auto; margin-left: 400px;">
+                    </div>
+                </div>
+
+                <!-- Post-disaster precautions -->
+                <div class="do's" id="afterFlood">
+                    <h4>Do's After a Flood</h4>
+                    <div class="precaution" id="checkForContamination">
+                        <h5>Check for Contamination:</h5>
+                        <p>Ensure your drinking water is safe before consumption.</p>
+                        <img src="https://media.istockphoto.com/id/1390096829/photo/environment-engineer-collect-samples-of-wastewater-from-industrial-canals-in-test-tube-close.jpg?s=612x612&w=0&k=20&c=noNV_84cJSOyHkNtjUjuRaruAISjqjKoACShUhWkoRg=" alt="Check Water Safety" style="width:300px; height:auto;margin-left: 70px;">
+                    </div>
+                    <div class="precaution" id="avoidStandingWater">
+                        <h5>Avoid Standing Water:</h5>
+                        <p>Standing water can hide hazards such as debris and contamination.</p>
+                        <img src="https://cbsmn.com/wp-content/uploads/2020/04/Screenshot-2024-10-10-at-2.55.02%E2%80%AFPM-min-1024x673.png" alt="Avoid Standing Water" style="width:300px; height:auto;margin-left: 70px;">
+                    </div>
+                    <div class="precaution" id="reportDamagesFlood">
+                        <h5>Report Damages:</h5>
+                        <p>Notify local authorities of structural damages or other flood-related issues.</p>
+                        <img src="https://img.freepik.com/premium-vector/document-error-icon-comic-style-broken-report-cartoon-vector-illustration-white-isolated-background-damaged-splash-effect-business-concept_157943-7540.jpg" alt="Report Damages" style="width:300px; height:auto;margin-left: 70px;">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Preparedness Section -->
+        <section id="prepare">
+            <div class="container">
+                <h3>Preparedness</h3>
+                <hr><br>
+                <ul>
+                    <li>
+                        Know your flood risk and understand flood warnings.
+                        <br><img src="https://pbs.twimg.com/profile_images/497691483198083073/BV4OQRMy_400x400.png" alt="Flood Risk" style="width:300px; height:auto; margin-left: 70px;">
+                    </li>
+                    <li>
+                        Develop an emergency plan and evacuation routes.
+                        <br><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSJKlltwMf8jvpHh1lTmRVTrvYe68N0_0QXYw&s" alt="Evacuation Plan" style="width:300px; height:auto; margin-left: 70px;">
+                    </li>
+                    <li>
+                        Keep essential supplies, including water, food, and medications, ready.
+                        <br><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRkBDLMVNl8LDUGGs0FZBeE_fuWxk3AL9T0fg&s" alt="Essential Supplies" style="width:300px; height:auto; margin-left: 70px;">
+                    </li>
+                    <li>
+                        Install water-resistant barriers and backflow valves in your home.
+                        <br><img src="https://lirp.cdn-website.com/88d58c4e/dms3rep/multi/opt/Document-72a0f409-640w.jpeg" alt="Water Barriers" style="width:300px; height:auto;margin-left: 70px;">
+                    </li>
+                    <li>
+                        Stay informed with emergency alerts and notifications.
+                        <br><img src="https://thumbs.dreamstime.com/b/stay-informed-keep-yourself-updated-knowledgeable-current-events-developments-changes-particular-field-326016494.jpg" alt="Emergency Alerts" style="width:300px; height:auto;margin-left: 70px; margin-bottom: 100px;">
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+    <!-- Footer Section -->
+    <footer>
+        <div class="footer-container">
+            <p>ReliefPlus &copy; 2024 | All Rights Reserved</p>
+            <nav>
+                <a href="aid.html">Aid</a>
+                <a href="support.html">Support</a>
+                <a href="contact.html">Contact</a>
+                <a href="recovery.html">Resources</a>
+            </nav>
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Earthquake - ReliefPlus</title>
+    <link rel="stylesheet" href="earthquake-style.css">
+</head>
+<body>
+    <!-- Header / Navbar -->
+    <header>
+        <div class="navbar">
+            <div class="logo">ReliefPlus</div>
+            <nav>
+                <ul class="nav-links right-links">
+                    <li><a href="aid.html">Aid</a></li>
+                    <li><a href="support.html">Support</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="recovery.html">Resources</a></li>
+                </ul>
+            </nav>
+            
+            <div class="cta-button">
+                <a href="map1.html">Evacuation Map</a>
+                <a href="donate.html">Contribute</a>
+            </div>
+            <div class="mobile-menu-icon">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </header>
+
+    <!-- Side navigation -->
+    <div class="sidenav">
+        <h3>CONTENT</h3>
+        <div class="content">
+            <a href="#overview">Overview</a>
+            <div class="dropdown-section">
+                <a href="#Precautions" onclick="toggleDropdown('precautionDropdown')">Precautions</a>
+                <div id="precautionDropdown" class="dropdown-content"></div>
+            </div>
+            <a href="#prepare">Preparedness</a>
+        </div>
+    </div>
+    
+    <script>
+        function toggleDropdown(dropdownId) {
+            const dropdown = document.getElementById(dropdownId);
+            if (dropdown.innerHTML === '') {
+                if (dropdownId === 'precautionDropdown') {
+                    dropdown.innerHTML = `
+                        <ul>
+                            <li><a href="#beforeEarthquake">Before Earthquake</a></li>
+                            <li><a href="#duringEarthquake">During Earthquake</a></li>
+                            <li><a href="#afterEarthquake">After Earthquake</a></li>
+                        </ul>`;
+                }
+            } else {
+                dropdown.innerHTML = '';
+            }
+        }
+    </script>    
+
+    <!-- Page content -->
+    <div class="main">
+        <!-- Banner Section -->
+        <section class="banner">
+            <h2>Earthquakes</h2>
+            <p>Comprehensive Guide: Precautions and Preparedness</p>
+        </section>
+
+        <!-- Overview Section -->
+        <section id="overview">
+            <div class="container">
+                <h3>Overview</h3>
+                <hr><br>
+                <table cellspacing="7">
+                    <tr>
+                        <td style="vertical-align: top;">
+                            <p>
+                                An earthquake is a sudden and violent shaking of the ground, often caused by movement along fault lines or volcanic activity. Earthquakes can cause damage to buildings, roads, and other infrastructure, and can trigger secondary hazards such as tsunamis, landslides, and fires.
+                            </p>
+                        </td>
+                        <td>
+                            <img src="Pictures/earthquake.jpeg" alt="Earthquake Image" style="width:400px; height:auto;">
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </section>
+
+        <!-- Precautions for Earthquakes -->
+        <section id="Precautions">
+            <div class="container">
+                <h3>Precautions - Before and After an Earthquake</h3>
+                <hr><br>
+
+                <!-- Pre-disaster precautions -->
+                <div class="do's" id="beforeEarthquake">
+                    <h4>Do's Before an Earthquake</h4>
+                    <div class="precaution" id="secureItems">
+                        <h5>Secure Items:</h5>
+                        <p>Ensure heavy furniture and objects are securely anchored to the wall to prevent them from falling during the earthquake.</p>
+                        <img src="https://us506.directrouter.com/~tekhscxs/wp-content/uploads/step1wideicon.png.jpg" alt="Secure Items" style="width:300px; height:auto; margin-left: 400px;">
+                    </div>
+                    <div class="precaution" id="establishSafeRoom">
+                        <h5>Establish Safe Rooms:</h5>
+                        <p>Designate and practice safe spots, like under tables or against interior walls, to take shelter in case of shaking.</p>
+                        <img src="https://texasstormshelterguy.com/wp-content/uploads/2024/02/e6d28390-bcb9-ee11-80c6-5cb901e4408c-600x597.png" alt="Safe Room" style="width:300px; height:auto; margin-left: 400px;">
+                    </div>
+                    <div class="precaution" id="emergencyKit">
+                        <h5>Emergency Kit:</h5>
+                        <p>Prepare an emergency kit with essentials like water, non-perishable food, first-aid supplies, and a flashlight.</p>
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTEni62pF2zV6UudcmWSN8JnxPAC_W-kJgAgQ&s" alt="Emergency Kit" style="width:300px; height:auto; margin-left: 400px;">
+                    </div>
+                </div>
+
+                <!--During-->
+
+                <div class="do's" id="duringEarthquake">
+                    <h4>Do's During an Earthquake</h4>
+                    <div class="precaution" id="secureItems">
+                        <h5>Find a safe Place to hide:</h5>
+                        <p>Try to find a safe place like under the table and try to hid in elevators or try to run out of buildings.</p>
+                        <img src="https://www.shutterstock.com/image-vector/earthquake-safety-rules-instruction-vector-260nw-2348736933.jpg" alt="Secure Items" style="width:300px; height:auto; margin-left: 400px;">
+                    </div>
+                </div>
+
+                <!-- Post-disaster precautions -->
+                <div class="do's" id="afterEarthquake">
+                    <h4>Do's After an Earthquake</h4>
+                    <div class="precaution" id="checkForDamages">
+                        <h5>Check for Damages:</h5>
+                        <p>Inspect your home for structural damage and turn off gas lines to prevent fire hazards.</p>
+                        <img src="https://thumbs.dreamstime.com/b/magnifying-glass-increases-damage-wall-20740527.jpg" alt="Check for damages" style="width:300px; height:auto;margin-left: 400px;">
+                    </div>
+                    <div class="precaution" id="stayAwayFromDamagedAreas">
+                        <h5>Stay Away from Damaged Areas:</h5>
+                        <p>Avoid damaged buildings and infrastructure to reduce the risk of injury from aftershocks or collapsing structures.</p>
+                        <img src="data:image/png;base64,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" alt="Stay away from damaged areas" style="width:300px; height:auto;margin-left: 400px;">
+                    </div>
+                    <div class="precaution" id="assistOthers">
+                        <h5>Assist Others:</h5>
+                        <p>Help injured individuals and those in need, particularly elderly and children.</p>
+                        <img src="https://plus.unsplash.com/premium_photo-1683133593455-814352d8f6d0?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8aGVscGluZ3xlbnwwfHwwfHx8MA%3D%3D" alt="Assist Others" style="width:300px; height:auto;margin-left: 400px;">
+                    </div>
+                </div>
+
+        <!-- Preparedness Section -->
+        <section id="prepare">
+            <div class="container">
+                <h3>Preparedness</h3>
+                <hr><br>
+                <ul>
+                    <li>
+                        Develop a family emergency plan and practice evacuation drills.
+                        <br><img src="https://amerisafegroup.com/wp-content/uploads/2021/09/iStock-1207460317-scaled-1-2048x1366.jpg" alt="Emergency Plan" style="width:300px; height:auto; margin-left: 70px;">
+                    </li>
+                    <li>
+                        Stay connected to community warning systems for real-time alerts.
+                        <br><img src="https://wvutoday.wvu.edu/files/7c1b92b1-3684-4de6-be3b-d6a28e69cae2/1200x800?cb=4d4440584fbdf411008273e2ae722814" alt="Community Warning" style="width:300px; height:auto; margin-left: 70px;">
+                    </li>
+                    <li>
+                        Strengthen buildings to withstand natural disasters.
+                        <br><img src="https://img.freepik.com/free-vector/building-safety-abstract-concept_335657-3114.jpg" alt="Building Safety" style="width:300px; height:auto; margin-left: 70px;">
+                    </li>
+                    <li>
+                        Learn basic first-aid techniques and CPR to assist during emergencies.
+                        <br><img src="https://www.vedantu.com/seo/content-images/ec7af53f-9c17-45e9-aecc-41a1cf58d2ab_1..png" alt="First Aid" style="width:300px; height:auto;margin-left: 70px;">
+                    </li>
+                    <li>
+                        Establish a communication plan to contact loved ones during a disaster.
+                        <br><img src="https://www.ocmsolution.com/wp-content/uploads/2023/10/OCM-Communication-Plan-600x337.jpg" alt="Communication Plan" style="width:300px; height:auto;margin-left: 70px; margin-bottom: 100px;">
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+    <!-- Footer Section -->
+    <footer>
+        <div class="footer-container">
+            <p>ReliefPlus &copy; 2024 | All Rights Reserved</p>
+            <nav>
+                <a href="aid.html">Aid</a>
+                <a href="support.html">Support</a>
+                <a href="contact.html">Contact</a>
+                <a href="recovery.html">Resources</a>
+            </nav>
+        </div>
+    </footer>
+</body>
+</html>

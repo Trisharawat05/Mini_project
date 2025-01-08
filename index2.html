@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ReliefPlus - Prepare, Aid, Support</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+    <div class="navbar">
+        <div class="logo">ReliefPlus</div>
+        <nav>
+            <ul class="nav-links right-links">
+                <li><a href="aid.html">Aid</a></li>
+                <li><a href="support.html">Support</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="recovery.html">Resources</a></li>
+            </ul>
+        </nav>
+        
+        <div class="cta-button">
+            <a href="map1.html">Evacuation Map</a>
+            <a href="donate.html">Contribute</a>
+        </div>
+        <div class="mobile-menu-icon">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </div>
+</header>
+
+<script>
+    // Get the mobile menu icon and the navbar element  
+const mobileMenuIcon = document.querySelector('.mobile-menu-icon');  
+const navbar = document.querySelector('.navbar');  
+const navUl = document.querySelector('nav ul');  
+  
+// Add an event listener to the mobile menu icon  
+mobileMenuIcon.addEventListener('click', () => {  
+  console.log('Mobile menu icon clicked!');  
+  console.log('Navbar element:', navbar);  
+  console.log('Nav ul element:', navUl);  
+  navbar.classList.toggle('mobile-menu-opened');  
+  navUl.classList.toggle('mobile-menu-opened');  
+  console.log('Navbar class list:', navbar.classList);  
+  console.log('Nav ul class list:', navUl.classList);  
+});
+
+    </script>
+
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Be Prepared. Act Fast. Recover Stronger.</h1>
+            <p>Join the journey of readiness with us. Equip yourself to face the unforeseen with strength and resources.</p>
+            <div class="hero-buttons">
+                <a href="#Assistance" class="btn-primary">Get Assistance</a>
+                <a href="#calamities" class="btn-light">Learn More</a>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Featured Calamities Section -->
+    <section id="calamities">
+        <h2>Explore Natural Calamities</h2>
+        <div class="calamity-cards">
+            <div class="calamity-card">
+                <img src="https://www.ready.gov/sites/default/files/2022-04/kids_earthquakes.jpg" alt="Earthquake Icon">
+                <h3>Earthquakes</h3>
+                <a href="earthquake.html">Learn More</a>
+            </div>
+            <div class="calamity-card">
+                <img src="https://cdn.mos.cms.futurecdn.net/to8Nht8uw3dUFAM2XEb9MA.jpg" alt="Tsunami Icon">
+                <h3>Tsunamis</h3>
+                <a href="tsunami.html">Learn More</a>
+            </div>
+            <div class="calamity-card">
+                <img src="https://www.belfor.com/us/wp-content/uploads/sites/2/2024/08/Tropical-Storm-vs-Hurricane-What_s-the-Difference.jpeg" alt="Hurricane Icon">
+                <h3>Hurricanes</h3>
+                <a href="hurricane.html">Learn More</a>
+            </div>
+            <div class="calamity-card">
+                <img src="https://i.natgeofe.com/n/d673d779-20b3-482c-b497-52bb4ae22b51/01-reference-volcanoes-cb9bmt.jpg" alt="Volcanic Eruptions Icon">
+                <h3>Volcanic Eruptions</h3>
+                <a href="volcano.html">Learn More</a>
+            </div>
+            <div class="calamity-card">
+                <img src="https://bsmedia.business-standard.com/_media/bs/img/article/2018-08/20/full/1534734867-6631.jpg?im=FeatureCrop,size=(803,452)" alt="Flood Icon">
+                <h3>Floods</h3>
+                <a href="floods.html">Learn More</a>
+            </div>
+            <div class="calamity-card">
+                <img src="https://cdn.britannica.com/90/191790-050-092C8C2A/Wildfire-Stanislaus-National-Forest-California-2013.jpg" alt="Wildfires Icon">
+                <h3>Wildfires</h3>
+                <a href="wildfire.html">Learn More</a>
+            </div>
+            <div class="calamity-card">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Landslide_in_Cusco%2C_Peru_-_2018.jpg/1200px-Landslide_in_Cusco%2C_Peru_-_2018.jpg" alt="Landslide Icon">
+                <h3>Landslides</h3>
+                <a href="landslide.html">Learn More</a>
+            </div>
+            <div class="calamity-card">
+                <img src="https://img.freepik.com/premium-photo/closeup-dead-tree-dry-barren-landscape-symbolizing-impact-drought-nature-environment_984126-11151.jpg" alt="Drought Icon">
+                <h3>Droughts</h3>
+                <a href="drought.html">Learn More</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Action Section 1: Aid Section -->
+    <section class="aid-section" id="Assistance">
+        <div class="section-wrapper">
+            <h2>Immediate Aid at Your Fingertips</h2>
+            <p>When a crisis hits, ReliefPlus is here to offer rapid and reliable aid. Access essential resources to handle the toughest times.</p>
+            <a href="aid.html" class="btn-secondary">Discover More</a>
+        </div>
+        <img src="https://www.wfp.org/sites/default/files/images/WFP-emergency-relief.jpg" class="section-image">
+    </section>
+
+    <!-- Action Section 2: Recovery Section -->
+    <section class="recovery-section">
+        <div class="section-wrapper">
+            <h2>Stronger Together, Recover Better</h2>
+            <p>Recovery is a journey. With us by your side, find the tools and support needed to rebuild with resilience.</p>
+            <a href="recovery.html" class="btn-secondary">Explore Recovery</a>
+        </div>
+        <img src="https://sharkeyetech.com/cms/upload/post/images/shark-eye-tech-blog-disaster-recovery.jpg" alt="Recovery Support" class="section-image">
+    </section>
+
+    <!-- Call-to-Action Section: Donation -->
+    <section class="donation-section">
+        <div class="section-wrapper">
+            <h2>Your Help Matters More Than Ever</h2>
+            <p>Every contribution can change lives. Help us bring relief to those who need it most.</p>
+            <a href="donate.html" class="btn-primary">Donate Now</a>
+        </div>
+        <img src="https://lssparle.org.in/wp-content/uploads/2021/10/hub_12_18_charity-Hero-1200x900-1.jpg" alt="Support Through Donation" class="section-image">
+    </section>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>Empowering communities through Renewable Energy | Location: Latitude: 25.0325, Longitude: 77.0163 | Wind Power: 2390 kW | Solar Power: 2000 W</p>
+    </footer>
+
+    <script src="index.js"></script>
+</body>
+</html>

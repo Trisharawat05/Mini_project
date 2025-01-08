@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Evacuation Route Map</title>
+    <link rel="stylesheet" href="map.css">
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDrtaV8wdevyPKc9wloD_OlblC4oGwCiHs&callback=initMap" async defer></script>
+</head>
+<body>
+    <h3>Find Your Evacuation Route</h3>
+    <div id="map"></div>
+    <div id="directions-panel"></div>
+
+    <script>
+        let map, directionsService, directionsRenderer;
+        let currentLocation = { lat: 28.6139, lng: 77.2090 }; // Default to New Delhi, India
+        let destinationLocation = null; // To store the user-selected destination
+
+        // Initialize the map and set up event listeners
+        function initMap() {
+            // Create a map centered on current location
+            map = new google.maps.Map(document.getElementById("map"), {
+                zoom: 14,
+                center: currentLocation,
+            });
+
+            // Create DirectionsService and DirectionsRenderer objects
+            directionsService = new google.maps.DirectionsService();
+            directionsRenderer = new google.maps.DirectionsRenderer({
+                map: map,
+                panel: document.getElementById("directions-panel"),
+            });
+
+            // Get the user's current location
+            if (navigator.geolocation) {
+                navigator.geolocation.getCurrentPosition(
+                    (position) => {
+                        currentLocation = {
+                            lat: position.coords.latitude,
+                            lng: position.coords.longitude,
+                        };
+
+                        // Update the map center to the user's current location
+                        map.setCenter(currentLocation);
+
+                        // Optionally, set a default destination if not set
+                        if (!destinationLocation) {
+                            destinationLocation = { lat: 28.6448, lng: 77.2169 }; // Example: Connaught Place, New Delhi
+                        }
+
+                        // Calculate the route between current location and destination
+                        calculateRoute(currentLocation, destinationLocation);
+                    },
+                    () => {
+                        alert("Failed to fetch location. Using default location (New Delhi).");
+                        const defaultSafeZone = { lat: 28.6448, lng: 77.2169 }; // Example safe zone
+                        calculateRoute(currentLocation, defaultSafeZone);
+                    }
+                );
+            } else {
+                alert("Geolocation is not supported by this browser.");
+            }
+
+            // Add a listener for the click event on the map to set the destination
+            map.addListener('click', function(event) {
+                destinationLocation = event.latLng; // Get the clicked location
+                calculateRoute(currentLocation, destinationLocation);
+            });
+        }
+
+        // Function to calculate and display the route
+        function calculateRoute(startLocation, endLocation) {
+            const request = {
+                origin: startLocation,
+                destination: endLocation,
+                travelMode: google.maps.TravelMode.DRIVING, // Options: WALKING, BICYCLING, TRANSIT
+                provideRouteAlternatives: true,
+            };
+
+            directionsService.route(request, (result, status) => {
+                if (status === google.maps.DirectionsStatus.OK) {
+                    directionsRenderer.setDirections(result);
+                } else {
+                    alert("Directions request failed: " + status);
+                }
+            });
+        }
+    </script>
+</body>
+</html>

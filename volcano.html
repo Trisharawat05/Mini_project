@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Volcanic Eruption - ReliefPlus</title>
+    <link rel="stylesheet" href="volcano-style.css">
+</head>
+<body>
+    <!-- Header / Navbar -->
+    <header>
+        <div class="navbar">
+            <div class="logo">ReliefPlus</div>
+            <nav>
+                <ul class="nav-links right-links">
+                    <li><a href="aid.html">Aid</a></li>
+                    <li><a href="support.html">Support</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="recovery.html">Resources</a></li>
+                </ul>
+            </nav>
+            
+            <div class="cta-button">
+                <a href="map1.html">Evacuation Map</a>
+                <a href="donate.html">Contribute</a>
+            </div>
+            <div class="mobile-menu-icon">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </header>
+
+    <!-- Side navigation -->
+    <div class="sidenav">
+        <h3>CONTENT</h3>
+        <div class="content">
+            <a href="#overview">Overview</a>
+            <div class="dropdown-section">
+                <a href="#Precautions" onclick="toggleDropdown('precautionDropdown')">Precautions</a>
+                <div id="precautionDropdown" class="dropdown-content"></div>
+            </div>
+            <a href="#prepare">Preparedness</a>
+        </div>
+    </div>
+    
+    <script>
+        function toggleDropdown(dropdownId) {
+            const dropdown = document.getElementById(dropdownId);
+            if (dropdown.innerHTML === '') {
+                if (dropdownId === 'precautionDropdown') {
+                    dropdown.innerHTML = `
+                        <ul>
+                            <li><a href="#beforeEruption">Before Eruption</a></li>
+                            <li><a href="#afterEruption">After Eruption</a></li>
+                        </ul>`;
+                }
+            } else {
+                dropdown.innerHTML = '';
+            }
+        }
+    </script>    
+
+    <!-- Page content -->
+    <div class="main">
+        <!-- Banner Section -->
+        <section class="banner">
+            <h2>Volcanic Eruption</h2>
+            <p>Comprehensive Guide: Causes, Effects, and Preparedness</p>
+        </section>
+
+        <!-- Overview Section -->
+        <section id="overview">
+            <div class="container">
+                <h3>Overview</h3>
+                <hr><br>
+                <table cellspacing="7">
+                    <tr>
+                        <td style="vertical-align: top;">
+                            <p>
+                                Volcanic eruptions occur when magma, gas, and ash escape through the Earth’s crust. These events can cause widespread devastation, including lava flows, ashfall, pyroclastic flows, and even climate changes. Preparing for volcanic eruptions is essential to minimize their impact.
+                            </p>
+                        </td>
+                        <td>
+                            <img src="https://cdn.shopify.com/s/files/1/0677/4059/8571/files/MtRuang-Volcano_Mob.jpg?v=1714486061" alt="Volcanic Eruption Image" style="width:400px; height:auto;">
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </section>
+
+        <!-- Precautions for Volcanic Eruptions -->
+        <section id="Precautions">
+            <div class="container">
+                <h3>Precautions - Before and After a Volcanic Eruption</h3>
+                <hr><br>
+
+                <!-- Pre-disaster precautions -->
+                <div class="do's" id="beforeEruption">
+                    <h4>Do's Before a Volcanic Eruption</h4>
+                    <div class="precaution" id="monitorUpdates">
+                        <h5>Monitor Updates:</h5>
+                        <p>Stay tuned to local emergency broadcasts and volcano activity updates.</p>
+                        <img src="https://www.shutterstock.com/image-photo/stay-updated-text-button-on-260nw-2263538435.jpg" alt="Monitor Updates" style="width:300px; height:auto; margin-left: 400px;">
+                    </div>
+                    <div class="precaution" id="evacuationPlan">
+                        <h5>Evacuation Plan:</h5>
+                        <p>Identify evacuation routes and shelters in advance to ensure quick evacuation.</p>
+                        <img src="https://images.wondershare.com/edrawmax/maker2023/evacuation-plan-maker/new/brand-banner.png" alt="Evacuation Plan" style="width:300px; height:auto; margin-left: 400px;">
+                    </div>
+                    <div class="precaution" id="emergencySupplies">
+                        <h5>Emergency Supplies:</h5>
+                        <p>Prepare a survival kit with masks, water, food, goggles, and first-aid items.</p>
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQwXeeEdtMsqaTx8yGWKONNYqVDq5bSo2LCcw&s" alt="Emergency Supplies" style="width:300px; height:auto; margin-left: 400px;">
+                    </div>
+                </div>
+
+                <!-- Post-disaster precautions -->
+                <div class="do's" id="afterEruption">
+                    <h4>Do's After a Volcanic Eruption</h4>
+                    <div class="precaution" id="avoidAshfall">
+                        <h5>Avoid Ashfall:</h5>
+                        <p>Stay indoors and wear masks and goggles if you must go outside.</p>
+                        <img src="https://www.wikihow.com/images/thumb/0/09/Survive-a-Volcanic-Eruption-Step-10-Version-2.jpg/v4-460px-Survive-a-Volcanic-Eruption-Step-10-Version-2.jpg.webp" alt="Avoid Ashfall" style="width:300px; height:auto;margin-left: 70px;">
+                    </div>
+                    <div class="precaution" id="inspectDamages">
+                        <h5>Inspect for Damages:</h5>
+                        <p>Carefully check your home for ash damage or weakened structures.</p>
+                        <img src="https://www.shutterstock.com/image-vector/illustration-check-damage-situation-house-260nw-1961721994.jpg" alt="Inspect Damages" style="width:300px; height:auto;margin-left: 70px;">
+                    </div>
+                    <div class="precaution" id="helpCommunity">
+                        <h5>Help Your Community:</h5>
+                        <p>Assist others in cleaning ash deposits and caring for vulnerable individuals.</p>
+                        <img src="https://regenbrampton.com/wp-content/uploads/2023/08/How-Does-Volunteering-Help-the-Community_-Hero.jpg" alt="Help Community" style="width:300px; height:auto;margin-left: 70px;">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Preparedness Section -->
+        <section id="prepare">
+            <div class="container">
+                <h3>Preparedness</h3>
+                <hr><br>
+                <ul>
+                    <li>
+                        Learn about the volcanoes in your area and their history.
+                        <br><img src="https://www.gsi.ie/images/images/pacific_ring_of_fire_Nat_Geo.jpg" alt="Volcano History" style="width:300px; height:auto; margin-left: 70px;">
+                    </li>
+                    <li>
+                        Strengthen your property to withstand ashfall and minor tremors.
+                        <br><img src="https://ghareka.com/wp-content/uploads/2023/06/Shielding-Your-Sanctuary-Building-Materials-to-Protect-Your-Home-from-Natural-Disasters.jpg" alt="Property Strengthening" style="width:300px; height:auto; margin-left: 70px;">
+                    </li>
+                    <li>
+                        Practice evacuation drills with family and community members.
+                        <br><img src="https://blog.koorsen.com/hubfs/Employee_Training_Drills.jpg" alt="Evacuation Drill" style="width:300px; height:auto; margin-left: 70px;">
+                    </li>
+                    <li>
+                        Establish a communication plan for emergencies.
+                        <br><img src="https://fastercapital.com/i/Emergency-preparedness--How-emergency-preparedness-can-help-the-elderly-and-disabled-with-planning-and-response--Creating-an-Emergency-Communication-Plan.webp" alt="Communication Plan" style="width:300px; height:auto;margin-left: 70px;">
+                    </li>
+                    <li>
+                        Stay informed about volcanic alert levels in your region.
+                        <br><img src="https://thumbs.dreamstime.com/b/stay-informed-written-blue-key-metallic-keyboard-finger-pressing-key-stay-informed-inscription-blue-keyboard-key-183328544.jpg" alt="Volcano Alert" style="width:300px; height:auto;margin-left: 70px; margin-bottom: 100px;">
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+    <!-- Footer Section -->
+    <footer>
+        <div class="footer-container">
+            <p>ReliefPlus &copy; 2024 | All Rights Reserved</p>
+            <nav>
+                <a href="aid.html">Aid</a>
+                <a href="support.html">Support</a>
+                <a href="contact.html">Contact</a>
+                <a href="recovery.html">Resources</a>
+            </nav>
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Landslides - ReliefPlus</title>
+    <link rel="stylesheet" href="landslide-style.css">
+</head>
+<body>
+    <!-- Header / Navbar -->
+    <header>
+        <div class="navbar">
+            <div class="logo">ReliefPlus</div>
+            <nav>
+                <ul class="nav-links right-links">
+                    <li><a href="aid.html">Aid</a></li>
+                    <li><a href="support.html">Support</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="recovery.html">Resources</a></li>
+                </ul>
+            </nav>
+            
+            <div class="cta-button">
+                <a href="map1.html">Evacuation Map</a>
+                <a href="donate.html">Contribute</a>
+            </div>
+            <div class="mobile-menu-icon">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </header>
+
+    <!-- Side navigation -->
+    <div class="sidenav">
+        <h3>CONTENT</h3>
+        <div class="content">
+            <a href="#overview">Overview</a>
+            <div class="dropdown-section">
+                <a href="#Precautions" onclick="toggleDropdown('precautionDropdown')">Precautions</a>
+                <div id="precautionDropdown" class="dropdown-content"></div>
+            </div>
+            <a href="#prepare">Preparedness</a>
+        </div>
+    </div>
+    
+    <script>
+        function toggleDropdown(dropdownId) {
+            const dropdown = document.getElementById(dropdownId);
+            if (dropdown.innerHTML === '') {
+                if (dropdownId === 'precautionDropdown') {
+                    dropdown.innerHTML = `
+                        <ul>
+                            <li><a href="#beforeLandslide">Before Landslide</a></li>
+                            <li><a href="#duringLandslide">During Landslide</a></li>
+                            <li><a href="#afterLandslide">After Landslide</a></li>
+                        </ul>`;
+                }
+            } else {
+                dropdown.innerHTML = '';
+            }
+        }
+    </script>    
+
+    <!-- Page content -->
+    <div class="main">
+        <!-- Banner Section -->
+        <section class="banner">
+            <h2>Landslides</h2>
+            <p>Comprehensive Guide: Causes, Effects, and Preparedness</p>
+        </section>
+
+        <!-- Overview Section -->
+        <section id="overview">
+            <div class="container">
+                <h3>Overview</h3>
+                <hr><br>
+                <table cellspacing="7">
+                    <tr>
+                        <td style="vertical-align: top;">
+                            <p>
+                                Landslides are the movement of rock, soil, or debris down a slope caused by natural factors such as heavy rainfall, earthquakes, or volcanic activity. They can destroy property, infrastructure, and lives, making preparedness crucial in landslide-prone areas.
+                            </p>
+                        </td>
+                        <td>
+                            <img src="https://d9-wret.s3.us-west-2.amazonaws.com/assets/palladium/production/s3fs-public/styles/masonry/public/LaConchia_USGS_Photo.jpg?itok=6pyNxznZ" alt="Landslide Image" style="width:400px; height:auto;">
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </section>
+
+        <!-- Precautions for Landslides -->
+        <section id="Precautions">
+            <div class="container">
+                <h3>Precautions - Before, During, and After a Landslide</h3>
+                <hr><br>
+
+                <!-- Pre-disaster precautions -->
+                <div class="do's" id="beforeLandslide">
+                    <h4>Do's Before a Landslide</h4>
+                    <div class="precaution" id="monitorWeather">
+                        <h5>Monitor Weather:</h5>
+                        <p>Stay updated on weather forecasts, especially during heavy rainfall or in landslide-prone regions.</p>
+                        <img src="https://w7.pngwing.com/pngs/843/981/png-transparent-weather-forecasting-computer-monitors-display-device-computer-software-intelligent-monitoring-gadget-electronics-computer.png" alt="Monitor Weather" style="width:300px; height:auto; margin-left: 400px;">
+                    </div>
+                    <div class="precaution" id="stabilizeSlopes">
+                        <h5>Stabilize Slopes:</h5>
+                        <p>Plant trees and vegetation to reduce soil erosion and improve slope stability.</p>
+                        <img src="https://farnambaspar.com/en/wp-content/uploads/2024/01/555120.jpg" alt="Stabilize Slopes" style="width:300px; height:auto; margin-left: 400px;">
+                    </div>
+                    <div class="precaution" id="evacuationPlan">
+                        <h5>Evacuation Plan:</h5>
+                        <p>Identify safe areas and plan evacuation routes to leave quickly in case of danger.</p>
+                        <img src="https://images.wondershare.com/edrawmax/maker2023/evacuation-plan-maker/new/brand-banner.png" alt="Evacuation Plan" style="width:300px; height:auto; margin-left: 400px;">
+                    </div>
+                </div>
+
+                <!-- During disaster precautions -->
+                <div class="do's" id="duringLandslide">
+                    <h4>Do's During a Landslide</h4>
+                    <div class="precaution" id="takeCover">
+                        <h5>Take Cover:</h5>
+                        <p>If indoors, shelter under a sturdy table or desk. If outside, seek higher ground immediately.</p>
+                        <img src="https://cloudfrontgharpediabucket.gharpedia.com/uploads/2016/05/Take-Cover-Under-a-Piece-of-Furniture-04-0207030006.jpg" alt="Take Cover" style="width:300px; height:auto; margin-left: 70px;">
+                    </div>
+                    <div class="precaution" id="avoidRivers">
+                        <h5>Avoid Rivers:</h5>
+                        <p>Stay away from rivers and streams as landslides can trigger flash floods and debris flows.</p>
+                        <img src="https://www.wikihow.com/images/thumb/f/f2/Be-Safe-During-a-Landslide-Step-7-Version-3.jpg/v4-460px-Be-Safe-During-a-Landslide-Step-7-Version-3.jpg.webp" alt="Avoid Rivers" style="width:300px; height:auto; margin-left: 70px;">
+                    </div>
+                    <div class="precaution" id="remainCalm">
+                        <h5>Stay Calm:</h5>
+                        <p>Remain calm and avoid panic. Alert others nearby and move to a safe area as quickly as possible.</p>
+                        <img src="https://www.shutterstock.com/image-illustration/stay-calm-red-rubber-stamp-260nw-221463586.jpg" alt="Stay Calm" style="width:300px; height:auto; margin-left: 70px;">
+                    </div>
+                </div>
+
+                <!-- Post-disaster precautions -->
+                <div class="do's" id="afterLandslide">
+                    <h4>Do's After a Landslide</h4>
+                    <div class="precaution" id="stayAwayFromSlide">
+                        <h5>Stay Away from Slide Areas:</h5>
+                        <p>Avoid the landslide area as it may be unstable and prone to further movement.</p>
+                        <img src="https://img.genially.com/6099f66669fd6b2c1c7481bc/38a4a7b5-837a-458f-9889-44dc1f5e91dc.jpeg" alt="Stay Away from Slide" style="width:300px; height:auto; margin-left: 400px;">
+                    </div>
+                    <div class="precaution" id="inspectDamages">
+                        <h5>Inspect for Damages:</h5>
+                        <p>Check for damage to property, especially cracks in walls or slopes that could indicate instability.</p>
+                        <img src="https://www.shutterstock.com/image-vector/illustration-check-damage-situation-house-260nw-1961721994.jpg" alt="Inspect Damages" style="width:300px; height:auto; margin-left: 400px;">
+                    </div>
+                    <div class="precaution" id="assistOthers">
+                        <h5>Assist Others:</h5>
+                        <p>Help individuals trapped in debris and coordinate with rescue teams for support.</p>
+                        <img src="https://ofhsoupkitchen.org/wp-content/uploads/2024/01/how-to-help-others-2-1024x683.jpg" alt="Assist Others" style="width:300px; height:auto; margin-left: 400px;">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Preparedness Section -->
+        <section id="prepare">
+            <div class="container">
+                <h3>Preparedness</h3>
+                <hr><br>
+                <ul>
+                    <li>
+                        Map out landslide-prone areas in your region to identify potential risks.
+                        <br><img src="https://www.researchgate.net/publication/271624915/figure/fig3/AS:1060547290230784@1629865586477/A-Landslide-hazard-map-B-Risk-map.ppm" alt="Landslide Map" style="width:300px; height:auto; margin-left: 70px;">
+                    </li>
+                    <li>
+                        Conduct regular slope inspections to detect early signs of instability.
+                        <br><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTzjmqzjbMNPNDRrV3wtz8nhEePVGpJMYWKoA&s" alt="Slope Inspection" style="width:300px; height:auto; margin-left: 70px;">
+                    </li>
+                    <li>
+                        Develop and practice an evacuation plan with your family and community.
+                        <br><img src="https://www.ready.gov/sites/default/files/styles/large/public/2022-07/make_a_plan_2.png?itok=-Pnd4Z_F" alt="Evacuation Drill" style="width:300px; height:auto; margin-left: 70px;">
+                    </li>
+                    <li>
+                        Strengthen property foundations to withstand potential landslides.
+                        <br><img src="https://assets.onejswhomes.com/dream_home_foundation_8214b2eaad/dream_home_foundation_8214b2eaad.jpeg" alt="Property Strengthening" style="width:300px; height:auto;margin-left: 70px;">
+                    </li>
+                    <li>
+                        Stay informed about landslide alert systems in your region.
+                        <br><img src="https://thumbs.dreamstime.com/b/stay-informed-written-blue-key-metallic-keyboard-finger-pressing-key-stay-informed-inscription-blue-keyboard-key-183328544.jpg" alt="Landslide Alert" style="width:300px; height:auto;margin-left: 70px; margin-bottom: 100px;">
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+    <!-- Footer Section -->
+    <footer>
+        <div class="footer-container">
+            <p>ReliefPlus &copy; 2024 | All Rights Reserved</p>
+            <nav>
+                <a href="aid.html">Aid</a>
+                <a href="support.html">Support</a>
+                <a href="contact.html">Contact</a>
+                <a href="recovery.html">Resources</a>
+            </nav>
+        </div>
+    </footer>
+</body>
+</html>

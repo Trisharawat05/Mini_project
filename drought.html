@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Drought - ReliefPlus</title>
+    <link rel="stylesheet" href="drought-style.css">
+</head>
+<body>
+    <!-- Header / Navbar -->
+    <header>
+        <div class="navbar">
+            <div class="logo">ReliefPlus</div>
+            <nav>
+                <ul class="nav-links right-links">
+                    <li><a href="aid.html">Aid</a></li>
+                    <li><a href="support.html">Support</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="recovery.html">Resources</a></li>
+                </ul>
+            </nav>
+            
+            <div class="cta-button">
+                <a href="map1.html">Evacuation Map</a>
+                <a href="donate.html">Contribute</a>
+            </div>
+            <div class="mobile-menu-icon">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </header>
+
+    <!-- Side navigation -->
+    <div class="sidenav">
+        <h3>CONTENT</h3>
+        <div class="content">
+            <a href="#overview">Overview</a>
+            <div class="dropdown-section">
+                <a href="#Precautions" onclick="toggleDropdown('precautionDropdown')">Precautions</a>
+                <div id="precautionDropdown" class="dropdown-content"></div>
+            </div>
+            <a href="#prepare">Preparedness</a>
+        </div>
+    </div>
+    
+    <script>
+        function toggleDropdown(dropdownId) {
+            const dropdown = document.getElementById(dropdownId);
+            if (dropdown.innerHTML === '') {
+                if (dropdownId === 'precautionDropdown') {
+                    dropdown.innerHTML = `
+                        <ul>
+                            <li><a href="#beforeDrought">Before Drought</a></li>
+                            <li><a href="#duringDrought">During Drought</a></li>
+                            <li><a href="#afterDrought">After Drought</a></li>
+                        </ul>`;
+                }
+            } else {
+                dropdown.innerHTML = '';
+            }
+        }
+    </script>    
+
+    <!-- Page content -->
+    <div class="main">
+        <!-- Banner Section -->
+        <section class="banner">
+            <h2>Droughts</h2>
+            <p>Comprehensive Guide: Precautions and Preparedness</p>
+        </section>
+
+        <!-- Overview Section -->
+        <section id="overview">
+            <div class="container">
+                <h3>Overview</h3>
+                <hr><br>
+                <table cellspacing="7">
+                    <tr>
+                        <td style="vertical-align: top;">
+                            <p>
+                                A drought is an extended period of deficient rainfall relative to the statistical multi-year average for a region. Droughts can have severe impacts on agriculture, water supply, and ecosystems. The lack of water can lead to crop failure, water shortages, and even wildfires.
+                            </p>
+                        </td>
+                        <td>
+                            <img src="Pictures/drought.jpeg" alt="Drought Image" style="width:400px; height:auto;">
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </section>
+
+        <!-- Precautions for Droughts -->
+        <section id="Precautions">
+            <div class="container">
+                <h3>Precautions - Before, During, and After a Drought</h3>
+                <hr><br>
+
+                <!-- Pre-drought precautions -->
+                <div class="do's" id="beforeDrought">
+                    <h4>Do's Before a Drought</h4>
+                    <div class="precaution" id="waterConservation">
+                        <h5>Water Conservation:</h5>
+                        <p>Start conserving water by reducing daily usage. Install water-saving devices and avoid over-watering plants.</p>
+                        <img src="data:image/jpeg;base64,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" alt="Water Conservation" style="width:300px; height:auto; margin-left: 400px;">
+                    </div>
+                    <div class="precaution" id="cropPreparation">
+                        <h5>Prepare Crops:</h5>
+                        <p>Prepare for drought by planting drought-resistant crops and implementing water-efficient farming practices.</p>
+                        <img src="https://jcblagri.in/x_images/blog_pics/1689144421Agricultural-Implements-to-Prepare-Fields-for-Monsoon-Crops-_11zon.jpg" alt="Crop Preparation" style="width:300px; height:auto; margin-left: 400px;">
+                    </div>
+                </div>
+
+                <!-- During drought precautions -->
+                <div class="do's" id="duringDrought">
+                    <h4>Do's During a Drought</h4>
+                    <div class="precaution" id="limitWaterUsage">
+                        <h5>Limit Water Usage:</h5>
+                        <p>Limit water usage for non-essential activities. Implement water rationing if necessary.</p>
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTJEuar_p62hIMPHQAOIIvr1SnVO78qUg-UQg&s" alt="Limit Water Usage" style="width:300px; height:auto;">
+                    </div>
+                    <div class="precaution" id="monitorWaterSources">
+                        <h5>Monitor Water Sources:</h5>
+                        <p>Monitor local water sources to avoid depletion. Implement community-based water sharing if needed.</p>
+                        <img src="https://www.energyly.com/assets/images/water-monitoring-benefits.webp" alt="Monitor Water Sources" style="width:300px; height:auto;">
+                    </div>
+                </div>
+
+                <!-- Post-drought precautions -->
+                <div class="do's" id="afterDrought">
+                    <h4>Do's After a Drought</h4>
+                    <div class="precaution" id="restoreWaterSystems">
+                        <h5>Restore Water Systems:</h5>
+                        <p>After drought, repair and restore damaged water systems, such as irrigation, to ensure the availability of water for the next cycle.</p>
+                        <img src="data:image/jpeg;base64,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" alt="Restore Water Systems" style="width:300px; height:auto; margin-left: 400px;">
+                    </div>
+                    <div class="precaution" id="helpAffectedCommunities">
+                        <h5>Help Affected Communities:</h5>
+                        <p>Assist communities that have been heavily affected by drought by providing access to water and food supplies.</p>
+                        <img src="https://plus.unsplash.com/premium_photo-1683133593455-814352d8f6d0?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8aGVscGluZ3xlbnwwfHwwfHx8MA%3D%3D" alt="Assist Others" style="width:300px; height:auto;margin-left: 400px;">
+                    </div>
+                </div>
+
+        <!-- Preparedness Section -->
+        <section id="prepare">
+            <div class="container">
+                <h3>Preparedness</h3>
+                <hr><br>
+                <ul>
+                    <li>
+                        Develop a water conservation plan for your household and community.
+                        <br><img src="https://www.westminster-ma.gov/sites/g/files/vyhlif1431/f/resize/imce/householdwateruse-700x557.png" alt="Water Conservation Plan" style="width:300px; height:auto; margin-left: 70px;">
+                    </li>
+                    <li>
+                        Implement agricultural drought mitigation techniques like mulching and drought-resistant crops.
+                        <br><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTgDjHD9vhQxQ_WMH1I-Gqdv8R_2gm2egLY1w&s" alt="Agricultural Drought Mitigation" style="width:300px; height:auto; margin-left: 70px;">
+                    </li>
+                    <li>
+                        Strengthen community water-sharing programs.
+                        <br><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSWt64vLEwvcWG00h2OwG9BY9MGzJN1NQUXsurEcYomChpz4qTtclNdUa31W9YJ10UTkm8&usqp=CAU" alt="Community Water Sharing" style="width:300px; height:auto; margin-left: 70px;">
+                    </li>
+                    <li>
+                        Educate the public on drought risks and water conservation methods.
+                        <br><img src="https://i.ytimg.com/vi/i7F6QwRqyVI/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLA6BhfRfnhA6CG8ucR2Fw1_d6M3VQ" alt="Drought Education" style="width:300px; height:auto;margin-left: 70px;">
+                    </li>
+                    <li>
+                        Monitor drought forecasts and adjust plans accordingly.
+                        <br><img src="https://pub.mdpi-res.com/remotesensing/remotesensing-12-02298/article_deploy/html/images/remotesensing-12-02298-g009.png?1594998686" alt="Monitor Drought Forecasts" style="width:300px; height:auto;margin-left: 70px;">
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+    <!-- Footer Section -->
+    <footer>
+        <div class="footer-container">
+            <p>ReliefPlus &copy; 2024 | All Rights Reserved</p>
+            <nav>
+                <a href="aid.html">Aid</a>
+                <a href="support.html">Support</a>
+                <a href="contact.html">Contact</a>
+                <a href="recovery.html">Resources</a>
+            </nav>
+        </div>
+    </footer>
+</body>
+</html>
